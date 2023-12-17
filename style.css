@@ -6,6 +6,20 @@ body {
     background-color: #f0f0f0;
 }
 
+header {
+    background-color: #ffffff; /* Change to your preferred background color */
+    color: #000000; /* Change to black */
+    position: fixed; /* Header will be fixed at the top */
+    width: 100%;
+    text-align: center; /* Center-align header text */
+    padding: 15px 0; /* Adjust as needed */
+    z-index: 1000; /* Ensures header is above other content */
+}
+
+.logo {
+    display: inline-block;
+    margin-right: 20px; /* Adjust spacing between logo and text */
+}
 h1 {
     text-align: center;
     margin-top: 50px;
