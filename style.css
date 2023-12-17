@@ -6,6 +6,8 @@ body {
     background-color: #f0f0f0;
 }
 
+                                /* START OF THE ENTIRE WEBSITE PAGE */
+
 header {
     background-color: #5fabdd; /* Change to your preferred background color */
     color: #000000; /* Change to black */
@@ -17,6 +19,9 @@ header {
     transition: box-shadow 0.3s ease-in-out; /* Smooth transition for box-shadow */
 }
 
+
+                                /* BEGINNING OF THE BODY PARAGRAPHS */
+                                
 /* Apply the 3D floating effect on scroll */
 header.scroll {
     box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
