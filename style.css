@@ -9,7 +9,7 @@ body {
 header {
     background-color: #ffffff; /* Change to your preferred background color */
     color: #000000; /* Change to black */
-    /*position: fixed; /* Header will be fixed at the top */
+    position: fixed; /* Header will be fixed at the top */
     width: 100%;
     text-align: space-between; /* Center-align header text */
     padding: 15px 0; /* Adjust as needed */
