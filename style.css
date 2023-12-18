@@ -1,4 +1,6 @@
 /* style.css */
+
+/* Reset styles for the body */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -6,47 +8,48 @@ body {
     background-color: #f0f0f0;
 }
 
-                                /* START OF THE ENTIRE WEBSITE PAGE */
-
+/* Header styles */
 header {
-    background-color: #5fabdd; /* Change to your preferred background color */
-    color: #000000; /* Change to black */
-    position: fixed; /* Header will be fixed at the top */
+    background-color: #5fabdd;
+    color: #000000;
+    position: fixed;
     width: 100%;
-    text-align: center; /* Center-align header text */
-    padding: 15px 0; /* Adjust as needed */
-    z-index: 1000; /* Ensures header is above other content */
-    transition: box-shadow 0.3s ease-in-out; /* Smooth transition for box-shadow */
+    text-align: center;
+    padding: 15px 0;
+    z-index: 1000;
+    transition: box-shadow 0.3s ease-in-out;
 }
 
-
-                                /* BEGINNING OF THE BODY PARAGRAPHS */
-
-/* Apply the 3D floating effect on scroll */
+/* Add a subtle shadow on scroll */
 header.scroll {
-    box-shadow: 0px 3px 10px rgba(255, 4, 4, 0.877); /* Add a subtle shadow */
+    box-shadow: 0px 3px 10px rgba(255, 4, 4, 0.877);
+}
+
+/* Logo styles */
 .logo {
     display: inline-block;
-    margin-right: 20px; /* Adjust spacing between logo and text */
+    margin-right: 20px;
 }
 
+/* H1 styles */
 h1 {
-    font-weight: bold; /* Make the font style bold */
-    color: black; /* Set text color to black */
+    font-weight: bold;
+    color: black;
 }
 
-    main {
-        margin-top: 100px; /* Provide space below the header */
-        background-color: #ebe0e0e0; /* Set background to card paper white */
-        padding: 20px; /* Add padding for content */
-        transition: box-shadow 0.3s ease-in-out; /* Apply transition for box-shadow */
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
-        width: 80%; /* Adjust width as needed */
-        margin: 0 auto; /* Center main horizontally */
-        text-align: center; /* Center-align text */
-      }
-      
-      /* Apply the 3D floating effect on scroll */
-      main.scroll {
-        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Enhance shadow on scroll */
-      }
+/* Main content styles */
+main {
+    margin-top: 100px;
+    background-color: #ebe0e0e0;
+    padding: 20px;
+    transition: box-shadow 0.3s ease-in-out;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Add an enhanced shadow on scroll */
+main.scroll {
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
