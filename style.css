@@ -22,7 +22,7 @@ header {
 
 /* Add a subtle shadow on scroll */
 header.scroll {
-    box-shadow: 0px 3px 10px rgba(255, 4, 4, 0.877);
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.938);
 }
 
 /* Logo styles */
@@ -34,7 +34,7 @@ header.scroll {
 /* H1 styles */
 h1 {
     font-weight: bold;
-    color: black;
+    color: rgb(212, 11, 11);
 }
 
 /* Main content styles */
