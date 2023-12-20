@@ -50,7 +50,7 @@ main {
     color: #000; /* Set the text color to black */
 }
 
-main p {
+main h3 {
     color: #000; /* Set the text color for paragraph elements within main */
 }
 
