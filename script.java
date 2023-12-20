@@ -1,7 +1,7 @@
 // script.js
 
 // Text for typing animation
-const textToType = "Welcome to My Website!";
+const textToType = "This should be typing live....wow";
 
 // Time delay between each character (in milliseconds)
 const typingSpeed = 100;
