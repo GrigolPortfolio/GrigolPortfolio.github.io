@@ -1,18 +1,5 @@
 // script.js
 
-// Text for typing animation
-<div class="wrapper">
-    <div class="typing-demo">
-      This should be typing live....wow
-    </div>
-</div>
-
-// Start typing animation when the page loads
-window.onload = typeWriterEffect;
-
-
-
-
 
 //console.log("Hello, Engineering World!");
 
