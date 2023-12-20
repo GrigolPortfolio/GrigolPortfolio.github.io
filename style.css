@@ -11,7 +11,7 @@ body {
 /* Header styles */
 header {
     background-color: #5fabdd;
-    color: #000000;
+    color: #d10a0a;
     position: fixed;
     width: 100%;
     text-align: center;
@@ -32,7 +32,7 @@ header.scroll {
 }
 
 /* H1 styles */
-h1 {
+/*h1 {
     font-weight: bold;
     color: rgb(0, 0, 0);
 }
