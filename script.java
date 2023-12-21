@@ -1,21 +1,51 @@
-// script.js
+//____________________CODE FOR TYPEWRITER EFFECT_____________________
 
 const words = ["This should be typing live....wow "];
 let wordIndex = 0;
 let charIndex = 0;
+
 const typeEffect = () => {
-      const currentWord = words[wordIndex];
-      const currentWord = currentWord.substring(0, charIndex);
-      console.log(currentWord, currentChar);
+    const currentWord = words[wordIndex];
+    const currentChar = currentWord.substring(0, charIndex);
+
+    const headerH4 = document.querySelector('header h4 span');
+    headerH4.textContent = currentChar;
+
+    charIndex++;
+
+    if (charIndex <= currentWord.length) {
+        setTimeout(typeEffect, 100); // Adjust the interval for typing speed (milliseconds)
+    }
+};
+
+document.addEventListener('DOMContentLoaded', typeEffect);
+
+
+//_____________________CODE FOR 3D VIDEO______________________________
+
+const video = document.getElementById('scrollVideo');
+const videoContainer = document.getElementById('videoContainer');
+
+// Function to check if an element is in the viewport
+function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+    );
 }
 
+// Function to handle video playback based on scroll
+function handleVideoPlayback() {
+    if (isInViewport(videoContainer)) {
+        video.play();
+    } else {
+        video.pause();
+    }
+}
 
-//console.log("Hello, Engineering World!");
+// Event listener for scroll
+window.addEventListener('scroll', handleVideoPlayback);
 
-//3D Effect
-
-//window.addEventListener('scroll', function() {
- // var header = document.querySelector('header');
-  //header.classList.toggle('scroll', window.scrollY > 0);
-});
-
+// Initial check when the page loads
+handleVideoPlayback();
