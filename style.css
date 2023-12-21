@@ -1,23 +1,26 @@
-/* style.css */
-
-/* Reset styles for the body */
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
+    margin-left: 5px;
+    margin-right: 5px;
+    position: center;
     padding: 0;
+    max-width: 100%;
     background-color: #ffffff;
 }
 
-/* Header styles */
 header {
     background-color: #5fabdd;
     color: #000000;
     position: fixed;
     width: 100%;
-    text-align: left;
-    padding: 15px 0;
+    text-align: center;
+    padding: 5px;
     z-index: 1000;
     transition: box-shadow 0.3s ease-in-out;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 /* Add a subtle shadow on scroll */
@@ -25,25 +28,35 @@ header.scroll {
     box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.938);
 }
 
-
-/* Main content styles */
 main {
-    margin-top: 100px;
+    margin-top: 175px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+    position: center;
     background-color: #fffff9f3;
-    padding: 20px;
+    padding: 10px;
     transition: box-shadow 0.3s ease-in-out;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    max-width: 800px;
-    margin: 20px auto;
-    text-align: left;
-    color: #000; /* Set the text color to black */
+    width: 100%;
+    color: #000;
+    /* Set the text color to black */
 }
 
-main h4{
-        /* font-size: whatever size u want ;
-        color: ;
-        font-weight: ;    */
-        margin: 20px auto;
-        text-align: left;
-        max-width: 800px;
+main h3 {
+    /* font-size: whatever size u want ;
+         color: ;
+        font-weight: ;      */
+    text-align: center;
+    margin: 20px auto;
+
+}
+
+main p {
+    /* font-size: whatever size u want ;
+         color: ;
+        font-weight: ;      */
+    text-align: left;
+    margin: 10px auto;
+
 }
