@@ -34,10 +34,13 @@ main {
 
 main h3 {
     text-align: center;
-    margin: 20px auto;
+    margin-bottom: 150px auto;
+    margin-top: 150px;
+
+
 }
 
 main p {
     text-align: center;
-    margin: 100px auto;
+    margin: 5px auto;
 }
