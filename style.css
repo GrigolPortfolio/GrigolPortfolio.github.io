@@ -31,14 +31,14 @@ header.scroll {
 main {
     margin-top: 175px;
     margin-bottom: 5px;
-    margin-right: 5px;
-    margin-left: 5px;
+    margin-right: auto;
+    margin-left: auto;
     position: center;
     background-color: #fffff9f3;
     padding: 10px;
     transition: box-shadow 0.3s ease-in-out;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    width: 100%;
+    width: 95%;
     color: #000;
     /* Set the text color to black */
 }
