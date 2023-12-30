@@ -75,15 +75,67 @@
             euismod, sodales dui et, faucibus felis. Curabitur elementum varius odio, sed luctus nisi vestibulum non.
             Nulla id ligula ut leo dictum luctus nec sed quam. Nulla facilisi. Nullam rhoncus accumsan nibh, sed laoreet
             nisl vehicula in. Nam sodales dictum lacinia. Vivamus laoreet accumsan justo, vitae accumsan augue sagittis</p>
-
-                <section class="model-section">
-            <!-- 3D model section -->
-            <a-scene>
-                <a-entity id="yourModelID" gltf-model="url(test3dmodel.glb)"></a-entity>
-            </a-scene>
-        </section>
+                  <script>
+                    // Create a scene
+                    const scene = new THREE.Scene();
+                
+                    // Create a camera
+                    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+                    camera.position.z = 5;
+                
+                    // Create a renderer
+                    const renderer = new THREE.WebGLRenderer();
+                    renderer.setSize(window.innerWidth, window.innerHeight);
+                    document.body.appendChild(renderer.domElement);
+                
+                    // Load the STL file
+                    const loader = new THREE.STLLoader();
+                    loader.load('path_to_your_model.stl', function (geometry) {
+                      const material = new THREE.MeshNormalMaterial();
+                      const mesh = new THREE.Mesh(geometry, material);
+                      scene.add(mesh);
+                      renderer.render(scene, camera);
+                    });
+                
+                    // Animate/render loop
+                    function animate() {
+                      requestAnimationFrame(animate);
+                      renderer.render(scene, camera);
+                    }
+                    animate();
+                  </script>
         
-    </main>
+</main>
+
+                      <script>
+                    // Create a scene
+                    const scene = new THREE.Scene();
+                
+                    // Create a camera
+                    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+                    camera.position.z = 5;
+                
+                    // Create a renderer
+                    const renderer = new THREE.WebGLRenderer();
+                    renderer.setSize(window.innerWidth, window.innerHeight);
+                    document.body.appendChild(renderer.domElement);
+                
+                    // Load the STL file
+                    const loader = new THREE.STLLoader();
+                    loader.load('path_to_your_model.stl', function (geometry) {
+                      const material = new THREE.MeshNormalMaterial();
+                      const mesh = new THREE.Mesh(geometry, material);
+                      scene.add(mesh);
+                      renderer.render(scene, camera);
+                    });
+                
+                    // Animate/render loop
+                    function animate() {
+                      requestAnimationFrame(animate);
+                      renderer.render(scene, camera);
+                    }
+                    animate();
+                  </script>
     
     <script src="scriptjava.js"></script>
 </body>
