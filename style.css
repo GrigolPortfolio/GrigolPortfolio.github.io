@@ -12,8 +12,9 @@ header {
     text-align: center;
     padding: 5px;
     margin: 0 auto;
-    transition: box-shadow 0.3s ease-in-out;
-    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.938);
+    margin-top: 5px;
+    transition: box-shadow .3s ease-in-out;
+    box-shadow: 0px 8px 50px rgba(0, 0, 0, 0.938);
     position: fixed; /* Fixed position */
     top: 0; /* Position at the top */
     left: 0; /* Align to the left */
@@ -43,4 +44,12 @@ main h3 {
 main p {
     text-align: center;
     margin: 5px auto;
+}
+
+.model-section {
+    /* Styles for the section containing the 3D model */
+    display: flex;
+    justify-content: center; /* Center the model horizontally */
+    align-items: center; /* Center the model vertically */
+    height: 300px; /* Adjust the height of the section */
 }
