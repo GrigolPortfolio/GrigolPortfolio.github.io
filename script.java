@@ -49,3 +49,15 @@ window.addEventListener('scroll', handleVideoPlayback);
 
 // Initial check when the page loads
 handleVideoPlayback();
+
+//__________________CODE FOR 3D MODEL IMPORT__________________
+
+document.addEventListener('DOMContentLoaded', function () {
+    // When the DOM content is loaded
+
+    // Get the entity (3D model) by its ID
+    var modelEntity = document.querySelector('#yourModelID'); // Replace 'yourModelID' with the ID of your 3D model entity
+
+    // Manipulate the position of the model
+    modelEntity.setAttribute('position', { x: 1, y: 2, z: -3 }); // Modify the position (change x, y, z values)
+});
