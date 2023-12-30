@@ -38,7 +38,7 @@ container.appendChild(renderer.domElement);
 
 // Load the STL file and render the model in the scene
 const loader = new THREE.STLLoader();
-loader.load('path_to_your_model.stl', function (geometry) {
+loader.load('Nuts_and_Bolts_Template(1).stl', function (geometry) {
     const material = new THREE.MeshNormalMaterial();
     const mesh = new THREE.Mesh(geometry, material);
     scene.add(mesh);
