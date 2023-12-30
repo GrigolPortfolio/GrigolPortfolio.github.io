@@ -46,15 +46,7 @@ main p {
     margin: 5px auto;
 }
 
-.model-section {
-    /* Styles for the section containing the 3D model */
-    display: flex;
-    justify-content: center; /* Center the model horizontally */
-    align-items: center; /* Center the model vertically */
-    height: 300px; /* Adjust the height of the section */
-}
-
-/* 3D Model */
+/* __________________________ 3D Model __________________________________*/
 #model-container {
     width: 100%;
     height: 400px; /* Adjust height as needed */
