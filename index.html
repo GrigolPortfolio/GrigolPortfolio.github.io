@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.152.2/three.min.js"></script>
+
 <head>
     <meta charset="UTF-8" />
     <title>Grigol Engineering Portfolio</title>
     <link rel="stylesheet" href="style.css"> <!-- This links CSS-->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.152.2/three.min.js"></script>
+     
 </head>
 
 <!-- START OF THE ENTIRE WEBSITE PAGE -->
@@ -22,18 +22,18 @@
     <br>
     <main>
         <h3>This is a paragraph </h3>
-        <p> Hello, my name is Grigol Khochiashvili. I built this page to showcase my work as an upcoming Engineer, with
+        <p> Hello, my name is Grigol Khochiashvili. <br><br>I built this page to showcase my work as an upcoming Engineer, with
             a broad spectrum of engineering disciplines encompassing everything from computer/software engineering to
-            mechanical design, along with the diverse fields I'm exploring and aiming to excel in. <br>
+            mechanical design, along with the diverse fields I'm exploring and aiming to excel in. 
             
-            * I'm driven by a profound passion for technology and a relentless pursuit of excellence in customer service.  I have good experience in both fields of matter.
+            <br><br> I'm driven by a profound passion for technology and a relentless pursuit of excellence in customer service.  I have good experience in both fields of matter.
 
-<br> * My passion for technology extends beyond the basics; I come equipped with advanced proficiency in AutoCAD and SolidWorks 3D modeling, paired with my knowledge of programming languages like JavaScript, Python, CSS, and HTML. These additional skills enhance my ability to not only resolve technical issues but also innovate and adapt to evolving technological landscapes, contributing meaningfully to your team's goals.
+<br> <br>My passion for technology extends beyond the basics; I come equipped with advanced proficiency in AutoCAD and SolidWorks 3D modeling, paired with my knowledge of programming languages like JavaScript, Python, CSS, and HTML. These additional skills enhance my ability to not only resolve technical issues but also innovate and adapt to evolving technological landscapes, contributing meaningfully to your team's goals.
 
-<br> * Your dedication to delivering top-notch IT solutions aligns perfectly with my eagerness to contribute, adapt quickly, and continuously improve within a dynamic tech-driven environment.
+<br> <br>Your dedication to delivering top-notch IT solutions aligns perfectly with my eagerness to contribute, adapt quickly, and continuously improve within a dynamic tech-driven environment.
             
-            Lets see if it
-            breaks. Lets see now "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac facilisis ex. Quisque
+            <br><br>
+            Lets see now "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac facilisis ex. Quisque
             convallis metus vitae urna accumsan, id dapibus ipsum consequat. Fusce accumsan metus nec eros faucibus
             tincidunt. Phasellus volutpat, elit et blandit aliquet, nisi ligula dapibus dolor, sit amet scelerisque ex
             ligula ac sapien. Ut in malesuada tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
@@ -76,39 +76,16 @@
             Nulla id ligula ut leo dictum luctus nec sed quam. Nulla facilisi. Nullam rhoncus accumsan nibh, sed laoreet
             nisl vehicula in. Nam sodales dictum lacinia. Vivamus laoreet accumsan justo, vitae accumsan augue sagittis</p>
 
-</main>
-
-                      <script>
-                    // Create a scene
-                    const scene = new THREE.Scene();
-                
-                    // Create a camera
-                    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-                    camera.position.z = 5;
-                
-                    // Create a renderer
-                    const renderer = new THREE.WebGLRenderer();
-                    renderer.setSize(window.innerWidth, window.innerHeight);
-                    document.body.appendChild(renderer.domElement);
-                
-                    // Load the STL file
-                    const loader = new THREE.STLLoader();
-                    loader.load('Nuts_and_Bolts_Template(1).stl', function (geometry) {
-                      const material = new THREE.MeshNormalMaterial();
-                      const mesh = new THREE.Mesh(geometry, material);
-                      scene.add(mesh);
-                      renderer.render(scene, camera);
-                    });
-                
-                    // Animate/render loop
-                    function animate() {
-                      requestAnimationFrame(animate);
-                      renderer.render(scene, camera);
-                    }
-                    animate();
-                  </script>
+                <section class="model-section">
+            <!-- 3D model section -->
+            <a-scene>
+                <a-entity id="yourModelID" gltf-model="url(test3dmodel.glb)"></a-entity>
+            </a-scene>
+        </section>
+        
+    </main>
     
-    <script src="https://github.com/GrigolPortfolio/GrigolPortfolio.github.io/blob/9dada4a1472be6b807982b9b5eb510ca38a900ed/Nuts_and_Bolts_Template(1).stl"></script>
+    <script src="scriptjava.js"></script>
 </body>
 
 </html>
