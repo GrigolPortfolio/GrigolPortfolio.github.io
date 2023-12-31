@@ -23,14 +23,6 @@ header {
 }
 
 /* ___________________________vertical-line.css _____________________________________________*/
-.header-content {
-    display: flex;
-    align-items: center;
-}
-
-h1 {
-    margin-right: 20px; /* Adjust the distance between heading and line */
-}
 
 .line {
     height: 100%; /* Adjust height of the line */
