@@ -22,6 +22,22 @@ header {
     z-index: 1000; /* Ensure it stays above other elements */
 }
 
+/* ___________________________vertical-line.css _____________________________________________*/
+.header-content {
+    display: flex;
+    align-items: center;
+}
+
+h1 {
+    margin-right: 20px; /* Adjust the distance between heading and line */
+}
+
+.line {
+    height: 100%; /* Adjust height of the line */
+    border-right: 2px solid black; /* Change color and thickness as needed */
+}
+
+/* ___________________________________________________________________________________________*/
 main {
     margin-top: 175px;
     margin-bottom: 5px;
