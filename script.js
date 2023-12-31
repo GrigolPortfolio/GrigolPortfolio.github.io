@@ -28,7 +28,7 @@ const videoContainer = document.getElementById('videoContainer');
 
 // Function to check if an element is in the viewport
 function isInViewport(element) {
-    const rect = element.getBoundingClientRect(); 
+    const rect = element.getBoundingClientRect();
     return (
         rect.top >= 0 &&
         rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
