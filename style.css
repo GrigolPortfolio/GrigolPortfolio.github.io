@@ -24,11 +24,6 @@ header {
 
 /* ___________________________vertical-line.css _____________________________________________*/
 
-.line {
-    height: 100%; /* Adjust height of the line */
-    border-right: 2px solid black; /* Change color and thickness as needed */
-}
-
 /* ___________________________________________________________________________________________*/
 main {
     margin-top: 175px;
