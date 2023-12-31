@@ -20,6 +20,8 @@ header {
     left: 0; /* Align to the left */
     right: 0; /* Align to the right */
     z-index: 1000; /* Ensure it stays above other elements */
+    /* Apply border-radius for curved corners */
+    border-radius: 15px; /* Adjust the value as needed */
 }
 
 main {
