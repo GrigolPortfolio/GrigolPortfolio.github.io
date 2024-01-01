@@ -94,3 +94,7 @@ main p {
     align-items: center;
     height: 300px;
 }
+#model-container {
+    width: 50%; /* Adjust as needed */
+    height: 500px; /* Adjust as needed */
+}
