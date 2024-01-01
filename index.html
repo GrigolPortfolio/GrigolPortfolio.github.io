@@ -10,6 +10,10 @@
     <style>
         /* Your existing CSS styles */
         /* ... */
+        #model-container {
+            width: 100%;
+            height: 500px; /* Set the height as needed */
+        }
     </style>
 </head>
 
@@ -78,9 +82,7 @@
         window.addEventListener('scroll', displaySentence);
         // Initial call to displaySentence() is not needed as we're showing the first sentence on page load
     </script>
-</body>
 
-</html>
 
 
     <!-- START OF THE BODY PARAGRAPH OF PAGE-->
@@ -777,6 +779,13 @@
                 <a-entity id="yourModelID" gltf-model="url(test3dmodel.glb)"></a-entity>
             </a-scene>
         </section>
+ <!-- ________________________________Section for displaying the 3D model _________________________ -->
+        <section class="model-section">
+            <a-scene renderer="antialias: true">
+                <a-entity gltf-model="https://github.com/GrigolPortfolio/GrigolPortfolio.github.io/blob/657144b16f9788e6af0a0db709054a79dbe5411d/Nuts_and_Bolts_Template(1).stl"></a-entity>
+            </a-scene>
+        </section>
+        
     </main>
     
     <script src="scriptjava.js"></script>
