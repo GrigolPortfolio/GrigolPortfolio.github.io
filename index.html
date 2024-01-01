@@ -1,26 +1,91 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-
+    <!-- Existing meta tags, title, and other styles -->
     <meta charset="UTF-8" />
     <title>Grigol Engineering Portfolio</title>
-    <link rel="stylesheet" href="style.css"> <!-- This links CSS-->
-     
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        /* Your existing CSS styles */
+        /* ... */
+    </style>
 </head>
 
-<!-- START OF THE ENTIRE WEBSITE PAGE -->
-
 <body>
-    <!-- START OF THE HEADER OF THE WEBSITE -->
+    <!-- Your existing HTML content with header and other sections -->
     <header>
-        <h1>Welcome to My Engineering Portfolio</h1>
-        <h4><span>This should be typing live....wow </span></h4>
-
+        <div class="header-content" style="display: flex; align-items: center;">
+            <div class="header-text" style="margin-right: 50px;">
+                <h1 style="margin: 0;">GRIGOL <br> KHOCHIASHVILI</h1><br><h3>Grigolkhochiashvili@gmail.com<br>267-279-8648</h3>
+                <!-- No content in <h4> element -->
+            </div>
+            <div class="textbox" style="margin-right: 10500px; margin-top: -100px; margin-left: 180px;">
+                <p style="margin: 0;"><h4 id="typewriter" style="overflow: hidden; border-right: .15em solid orange; white-space: nowrap; margin: 0; letter-spacing: .10em; animation: typing 3s steps(40) forwards;"></h4></p>
+            </div>
+        </div>
     </header>
+
+
+    <script>
+        const sentences = [
+            "Welcome to My Engineering Portfolio. I built this page to showcase my work as an upcoming Engineer, with a broad spectrum of engineering disciplines encompassing everything from computer/software engineering to mechanical design, along with the diverse fields I'm exploring and aiming to excel in.",
+            "Sentence 2 for scrolling effect",
+            "Sentence 3 to display on scroll",
+            "Sentence 4 with typewriter effect",
+            "Sentence 5 changing as you scroll"
+            // Add more sentences here if needed
+        ];
+
+        let currentSentenceIndex = 0;
+        let typing = false;
+
+        function displaySentence() {
+            const scrollPosition = window.scrollY;
+            const windowHeight = window.innerHeight;
+            const contentHeight = document.body.clientHeight;
+            const totalSteps = sentences.length - 1;
+            const step = contentHeight / totalSteps;
+            const index = Math.floor(scrollPosition / step);
+
+            if (index !== currentSentenceIndex && !typing && index >= 0 && index < sentences.length) {
+                currentSentenceIndex = index;
+                typeSentence(sentences[currentSentenceIndex]);
+            }
+        }
+
+        function typeSentence(sentence) {
+            typing = true;
+            const h4 = document.getElementById('typewriter');
+            h4.textContent = ''; // Clear the existing text
+
+            let charIndex = 0;
+            const typingInterval = setInterval(() => {
+                h4.textContent += sentence.charAt(charIndex);
+                charIndex++;
+
+                if (charIndex >= sentence.length) {
+                    typing = false;
+                    clearInterval(typingInterval);
+                }
+            }, 100); // Adjust typing speed here (milliseconds)
+        }
+
+        // Initial display of the first sentence
+        typeSentence(sentences[0]);
+
+        window.addEventListener('scroll', displaySentence);
+        // Initial call to displaySentence() is not needed as we're showing the first sentence on page load
+    </script>
+</body>
+
+</html>
+
 
     <!-- START OF THE BODY PARAGRAPH OF PAGE-->
     <br>
     <main>
+        <br><br><br><br><br><br><br><br><br><br><br>
         <h3>This is a paragraph </h3>
         <p> Hello, my name is Grigol Khochiashvili. <br><br>I built this page to showcase my work as an upcoming Engineer, with
             a broad spectrum of engineering disciplines encompassing everything from computer/software engineering to
@@ -75,14 +140,642 @@
             euismod, sodales dui et, faucibus felis. Curabitur elementum varius odio, sed luctus nisi vestibulum non.
             Nulla id ligula ut leo dictum luctus nec sed quam. Nulla facilisi. Nullam rhoncus accumsan nibh, sed laoreet
             nisl vehicula in. Nam sodales dictum lacinia. Vivamus laoreet accumsan justo, vitae accumsan augue sagittis</p>
+            Lets see now "Lorfem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac facilisis ex. Quisque
+            convallis metus vitae urna accumsan, id dapibus ipsum consequat. Fusce accumsan metus nec eros faucibus
+            tincidunt. Phasellus volutpat, elit et blandit aliquet, nisi ligula dapibus dolor, sit amet scelerisque ex
+            ligula ac sapien. Ut in malesuada tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+            posuere cubilia Curae; Vestibulum aliquam elit ac odio mollis, quis consequat magna congue. Proin a velit
+            euismod, sodales dui et, faucibus felis. Curabitur elementum varius odio, sed luctus nisi vestibulum non.
+            Nulla id ligula ut leo dictum luctus nec sed quam. Nulla facilisi. Nullam rhoncus accumsan nibh, sed laoreet
+            nisl vehicula in. Nam sodales dictum lacinia. Vivamus laoreet accumsan justo, vitae accumsan augue sagittis
+            Helli, my name is Grigol Khochiashvili. I built this page to showcase my work as an upcoming Engineer, with
+            a broad spectrum of engineering disciplines encompassing everything from computer/software engineering to
+            mechanical design, along with the diverse fields I'm exploring and aiming to excel in. Lets see if it
+            breaks. Lets see now "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac facilisis ex. Quisque
+            convallis metus vitae urna accumsan, id dapibus ipsum consequat. Fusce accumsan metus nec eros faucibus
+            tincidunt. Phasellus volutpat, elit et blandit aliquet, nisi ligula dapibus dolor, sit amet scelerisque ex
+            <br><br><br><br><br><br><br><br>br<br>ligula ac sapien. Ut in malesuada tortor. Vestibulum ante ipsum primi
+            posuere cubilia Curae; Vestibulum aliquam elit ac odio mollis, quis consequat magna congue. Proin a velit
+            euismod, sodales dui et, faucibus felis. Curabitur elementum varius odio, sed luctus nisi vestibulum non.
+            Nulla id ligula ut leo dictum luctus nec sed quam. Nulla facilisi. Nullam rhoncus accumsan nibh, sed laoreet
+            nisl vehicula in. Nam sodales dictum lacinia. Vivamus laoreet accumsan justo, vitae accumsan augue sagittis
+            Helli, my name is Grigol Khochiashvili. I built this page to showcase my work as an upcoming Engineer, with
+            a broad spectrum of engineering disciplines encompassing everything from computer/software engineering to
+            mechanical design, along with the diverse fields I'm exploring and aiming to excel in. Lets see if it
+            breaks. Lets see now "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac facilisis ex. Quisque
+            convallis metus vitae urna accumsan, id dapibus ipsum consequat. Fusce accumsan metus nec eros faucibus
+            tincidunt. Phasellus volutpat, elit et blandit aliquet, nisi ligula dapibus dolor, sit amet scelerisque ex
+            ligula ac sapien. Ut in malesuada tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+            posuere cubilia Curae; Vestibulum aliquam elit ac odio mollis, quis consequat magna congue. Proin a velit
+            euismod, sodales dui et, faucibus felis. Curabitur elementum varius odio, sed luctus nisi vestibulum non.
+            Nulla id ligula ut leo dictum luctus nec sed quam. Nulla facilisi. Nullam rhoncus accumsan nibh, sed laoreet
+            nisl vehicula in. Nam sodales dictum lacinia. Vivamus laoreet accumsan justo, vitae accumsan augue sagittis
+            at."
+            Helli, my name is Grigol Khochiashvili. I built this page to showcase my work as an upcoming Engineer, with
+            a broad spectrum of engineering disciplines encompassing everything from computer/software engineering to
+            mechanical design, along with the diverse fields I'm exploring and aiming to excel in. Lets see if it
+            breaks. Lets see now "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac facilisis ex. Quisque
+            convallis metus vitae urna accumsan, id dapibus ipsum consequat. Fusce accumsan metus nec eros faucibus
+            tincidunt. Phasellus volutpat, elit et blandit aliquet, nisi ligula dapibus dolor, sit amet scelerisque ex
+            ligula ac sapien. Ut in malesuada tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+            posuere cubilia Curae; Vestibulum aliquam elit ac odio mollis, quis consequat magna congue. Proin a velit
+            euismod, sodales dui et, faucibus felis. Curabitur elementum varius odio, sed luctus nisi vestibulum non.
+            Nulla id ligula ut leo dictum luctus nec sed quam. Nulla facilisi. Nullam rhoncus accumsan nibh, sed laoreet
+            nisl vehicula in. Nam sodales dictum lacinia. Vivamus laoreet accumsan justo, vitae accumsan augue sagittis</p>
+            Lets see now "Lorfem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac facilisis ex. Quisque
+            convallis metus vitae urna accumsan, id dapibus ipsum consequat. Fusce accumsan metus nec eros faucibus
+            tincidunt. Phasellus volutpat, elit et blandit aliquet, nisi ligula dapibus dolor, sit amet scelerisque ex
+            ligula ac sapien. Ut in malesuada tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+            posuere cubilia Curae; Vestibulum aliquam elit ac odio mollis, quis consequat magna congue. Proin a velit
+            euismod, sodales dui et, faucibus felis. Curabitur elementum varius odio, sed luctus nisi vestibulum non.
+            Nulla id ligula ut leo dictum luctus nec sed quam. Nulla facilisi. Nullam rhoncus accumsan nibh, sed laoreet
+            nisl vehicula in. Nam sodales dictum lacinia. Vivamus laoreet accumsan justo, vitae accumsan augue sagittis
+            Helli, my name is Grigol Khochiashvili. I built this page to showcase my work as an upcoming Engineer, with
+            a broad spectrum of engineering disciplines encompassing everything from computer/software engineering to
+            mechanical design, along with the diverse fields I'm exploring and aiming to excel in. Lets see if it
+            breaks. Lets see now "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac facilisis ex. Quisque
+            convallis metus vitae urna accumsan, id dapibus ipsum consequat. Fusce accumsan metus nec eros faucibus
+            tincidunt. Phasellus volutpat, elit et blandit aliquet, nisi ligula dapibus dolor, sit amet scelerisque ex
+            <br><br><br><br><br><br><br><br>br<br>ligula ac sapien. Ut in malesuada tortor. Vestibulum ante ipsum primi
+            posuere cubilia Curae; Vestibulum aliquam elit ac odio mollis, quis consequat magna congue. Proin a velit
+            euismod, sodales dui et, faucibus felis. Curabitur elementum varius odio, sed luctus nisi vestibulum non.
+            Nulla id ligula ut leo dictum luctus nec sed quam. Nulla facilisi. Nullam rhoncus accumsan nibh, sed laoreet
+            nisl vehicula in. Nam sodales dictum lacinia. Vivamus laoreet accumsan justo, vitae accumsan augue sagittis
+            Helli, my name is Grigol Khochiashvili. I built this page to showcase my work as an upcoming Engineer, with
+            a broad spectrum of engineering disciplines encompassing everything from computer/software engineering to
+            mechanical design, along with the diverse fields I'm exploring and aiming to excel in. Lets see if it
+            breaks. Lets see now "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac facilisis ex. Quisque
+            convallis metus vitae urna accumsan, id dapibus ipsum consequat. Fusce accumsan metus nec eros faucibus
+            tincidunt. Phasellus volutpat, elit et blandit aliquet, nisi ligula dapibus dolor, sit amet scelerisque ex
+            ligula ac sapien. Ut in malesuada tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+            posuere cubilia Curae; Vestibulum aliquam elit ac odio mollis, quis consequat magna congue. Proin a velit
+            euismod, sodales dui et, faucibus felis. Curabitur elementum varius odio, sed luctus nisi vestibulum non.
+            Nulla id ligula ut leo dictum luctus nec sed quam. Nulla facilisi. Nullam rhoncus accumsan nibh, sed laoreet
+            nisl vehicula in. Nam sodales dictum lacinia. Vivamus laoreet accumsan justo, vitae accumsan augue sagittis
+            at."
+            Helli, my name is Grigol Khochiashvili. I built this page to showcase my work as an upcoming Engineer, with
+            a broad spectrum of engineering disciplines encompassing everything from computer/software engineering to
+            mechanical design, along with the diverse fields I'm exploring and aiming to excel in. Lets see if it
+            breaks. Lets see now "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac facilisis ex. Quisque
+            convallis metus vitae urna accumsan, id dapibus ipsum consequat. Fusce accumsan metus nec eros faucibus
+            tincidunt. Phasellus volutpat, elit et blandit aliquet, nisi ligula dapibus dolor, sit amet scelerisque ex
+            ligula ac sapien. Ut in malesuada tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+            posuere cubilia Curae; Vestibulum aliquam elit ac odio mollis, quis consequat magna congue. Proin a velit
+            euismod, sodales dui et, faucibus felis. Curabitur elementum varius odio, sed luctus nisi vestibulum non.
+            Nulla id ligula ut leo dictum luctus nec sed quam. Nulla facilisi. Nullam rhoncus accumsan nibh, sed laoreet
+            nisl vehicula in. Nam sodales dictum lacinia. Vivamus laoreet accumsan justo, vitae accumsan augue sagittis</p>
+            Lets see now "Lorfem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac facilisis ex. Quisque
+            convallis metus vitae urna accumsan, id dapibus ipsum consequat. Fusce accumsan metus nec eros faucibus
+            tincidunt. Phasellus volutpat, elit et blandit aliquet, nisi ligula dapibus dolor, sit amet scelerisque ex
+            ligula ac sapien. Ut in malesuada tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+            posuere cubilia Curae; Vestibulum aliquam elit ac odio mollis, quis consequat magna congue. Proin a velit
+            euismod, sodales dui et, faucibus felis. Curabitur elementum varius odio, sed luctus nisi vestibulum non.
+            Nulla id ligula ut leo dictum luctus nec sed quam. Nulla facilisi. Nullam rhoncus accumsan nibh, sed laoreet
+            nisl vehicula in. Nam sodales dictum lacinia. Vivamus laoreet accumsan justo, vitae accumsan augue sagittis
+            Helli, my name is Grigol Khochiashvili. I built this page to showcase my work as an upcoming Engineer, with
+            a broad spectrum of engineering disciplines encompassing everything from computer/software engineering to
+            mechanical design, along with the diverse fields I'm exploring and aiming to excel in. Lets see if it
+            breaks. Lets see now "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac facilisis ex. Quisque
+            convallis metus vitae urna accumsan, id dapibus ipsum consequat. Fusce accumsan metus nec eros faucibus
+            tincidunt. Phasellus volutpat, elit et blandit aliquet, nisi ligula dapibus dolor, sit amet scelerisque ex
+            <br><br><br><br><br><br><br><br>br<br>ligula ac sapien. Ut in malesuada tortor. Vestibulum ante ipsum primi
+            posuere cubilia Curae; Vestibulum aliquam elit ac odio mollis, quis consequat magna congue. Proin a velit
+            euismod, sodales dui et, faucibus felis. Curabitur elementum varius odio, sed luctus nisi vestibulum non.
+            Nulla id ligula ut leo dictum luctus nec sed quam. Nulla facilisi. Nullam rhoncus accumsan nibh, sed laoreet
+            nisl vehicula in. Nam sodales dictum lacinia. Vivamus laoreet accumsan justo, vitae accumsan augue sagittis
+            Helli, my name is Grigol Khochiashvili. I built this page to showcase my work as an upcoming Engineer, with
+            a broad spectrum of engineering disciplines encompassing everything from computer/software engineering to
+            mechanical design, along with the diverse fields I'm exploring and aiming to excel in. Lets see if it
+            breaks. Lets see now "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac facilisis ex. Quisque
+            convallis metus vitae urna accumsan, id dapibus ipsum consequat. Fusce accumsan metus nec eros faucibus
+            tincidunt. Phasellus volutpat, elit et blandit aliquet, nisi ligula dapibus dolor, sit amet scelerisque ex
+            ligula ac sapien. Ut in malesuada tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+            posuere cubilia Curae; Vestibulum aliquam elit ac odio mollis, quis consequat magna congue. Proin a velit
+            euismod, sodales dui et, faucibus felis. Curabitur elementum varius odio, sed luctus nisi vestibulum non.
+            Nulla id ligula ut leo dictum luctus nec sed quam. Nulla facilisi. Nullam rhoncus accumsan nibh, sed laoreet
+            nisl vehicula in. Nam sodales dictum lacinia. Vivamus laoreet accumsan justo, vitae accumsan augue sagittis
+            at."
+            Helli, my name is Grigol Khochiashvili. I built this page to showcase my work as an upcoming Engineer, with
+            a broad spectrum of engineering disciplines encompassing everything from computer/software engineering to
+            mechanical design, along with the diverse fields I'm exploring and aiming to excel in. Lets see if it
+            breaks. Lets see now "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac facilisis ex. Quisque
+            convallis metus vitae urna accumsan, id dapibus ipsum consequat. Fusce accumsan metus nec eros faucibus
+            tincidunt. Phasellus volutpat, elit et blandit aliquet, nisi ligula dapibus dolor, sit amet scelerisque ex
+            ligula ac sapien. Ut in malesuada tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+            posuere cubilia Curae; Vestibulum aliquam elit ac odio mollis, quis consequat magna congue. Proin a velit
+            euismod, sodales dui et, faucibus felis. Curabitur elementum varius odio, sed luctus nisi vestibulum non.
+            Nulla id ligula ut leo dictum luctus nec sed quam. Nulla facilisi. Nullam rhoncus accumsan nibh, sed laoreet
+            nisl vehicula in. Nam sodales dictum lacinia. Vivamus laoreet accumsan justo, vitae accumsan augue sagittis</p>
+            Lets see now "Lorfem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac facilisis ex. Quisque
+            convallis metus vitae urna accumsan, id dapibus ipsum consequat. Fusce accumsan metus nec eros faucibus
+            tincidunt. Phasellus volutpat, elit et blandit aliquet, nisi ligula dapibus dolor, sit amet scelerisque ex
+            ligula ac sapien. Ut in malesuada tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+            posuere cubilia Curae; Vestibulum aliquam elit ac odio mollis, quis consequat magna congue. Proin a velit
+            euismod, sodales dui et, faucibus felis. Curabitur elementum varius odio, sed luctus nisi vestibulum non.
+            Nulla id ligula ut leo dictum luctus nec sed quam. Nulla facilisi. Nullam rhoncus accumsan nibh, sed laoreet
+            nisl vehicula in. Nam sodales dictum lacinia. Vivamus laoreet accumsan justo, vitae accumsan augue sagittis
+            Helli, my name is Grigol Khochiashvili. I built this page to showcase my work as an upcoming Engineer, with
+            a broad spectrum of engineering disciplines encompassing everything from computer/software engineering to
+            mechanical design, along with the diverse fields I'm exploring and aiming to excel in. Lets see if it
+            breaks. Lets see now "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac facilisis ex. Quisque
+            convallis metus vitae urna accumsan, id dapibus ipsum consequat. Fusce accumsan metus nec eros faucibus
+            tincidunt. Phasellus volutpat, elit et blandit aliquet, nisi ligula dapibus dolor, sit amet scelerisque ex
+            <br><br><br><br><br><br><br><br>br<br>ligula ac sapien. Ut in malesuada tortor. Vestibulum ante ipsum primi
+            posuere cubilia Curae; Vestibulum aliquam elit ac odio mollis, quis consequat magna congue. Proin a velit
+            euismod, sodales dui et, faucibus felis. Curabitur elementum varius odio, sed luctus nisi vestibulum non.
+            Nulla id ligula ut leo dictum luctus nec sed quam. Nulla facilisi. Nullam rhoncus accumsan nibh, sed laoreet
+            nisl vehicula in. Nam sodales dictum lacinia. Vivamus laoreet accumsan justo, vitae accumsan augue sagittis
+            Helli, my name is Grigol Khochiashvili. I built this page to showcase my work as an upcoming Engineer, with
+            a broad spectrum of engineering disciplines encompassing everything from computer/software engineering to
+            mechanical design, along with the diverse fields I'm exploring and aiming to excel in. Lets see if it
+            breaks. Lets see now "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac facilisis ex. Quisque
+            convallis metus vitae urna accumsan, id dapibus ipsum consequat. Fusce accumsan metus nec eros faucibus
+            tincidunt. Phasellus volutpat, elit et blandit aliquet, nisi ligula dapibus dolor, sit amet scelerisque ex
+            ligula ac sapien. Ut in malesuada tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+            posuere cubilia Curae; Vestibulum aliquam elit ac odio mollis, quis consequat magna congue. Proin a velit
+            euismod, sodales dui et, faucibus felis. Curabitur elementum varius odio, sed luctus nisi vestibulum non.
+            Nulla id ligula ut leo dictum luctus nec sed quam. Nulla facilisi. Nullam rhoncus accumsan nibh, sed laoreet
+            nisl vehicula in. Nam sodales dictum lacinia. Vivamus laoreet accumsan justo, vitae accumsan augue sagittis
+            at."
+            Helli, my name is Grigol Khochiashvili. I built this page to showcase my work as an upcoming Engineer, with
+            a broad spectrum of engineering disciplines encompassing everything from computer/software engineering to
+            mechanical design, along with the diverse fields I'm exploring and aiming to excel in. Lets see if it
+            breaks. Lets see now "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac facilisis ex. Quisque
+            convallis metus vitae urna accumsan, id dapibus ipsum consequat. Fusce accumsan metus nec eros faucibus
+            tincidunt. Phasellus volutpat, elit et blandit aliquet, nisi ligula dapibus dolor, sit amet scelerisque ex
+            ligula ac sapien. Ut in malesuada tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+            posuere cubilia Curae; Vestibulum aliquam elit ac odio mollis, quis consequat magna congue. Proin a velit
+            euismod, sodales dui et, faucibus felis. Curabitur elementum varius odio, sed luctus nisi vestibulum non.
+            Nulla id ligula ut leo dictum luctus nec sed quam. Nulla facilisi. Nullam rhoncus accumsan nibh, sed laoreet
+            nisl vehicula in. Nam sodales dictum lacinia. Vivamus laoreet accumsan justo, vitae accumsan augue sagittis</p>
+            Lets see now "Lorfem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac facilisis ex. Quisque
+            convallis metus vitae urna accumsan, id dapibus ipsum consequat. Fusce accumsan metus nec eros faucibus
+            tincidunt. Phasellus volutpat, elit et blandit aliquet, nisi ligula dapibus dolor, sit amet scelerisque ex
+            ligula ac sapien. Ut in malesuada tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+            posuere cubilia Curae; Vestibulum aliquam elit ac odio mollis, quis consequat magna congue. Proin a velit
+            euismod, sodales dui et, faucibus felis. Curabitur elementum varius odio, sed luctus nisi vestibulum non.
+            Nulla id ligula ut leo dictum luctus nec sed quam. Nulla facilisi. Nullam rhoncus accumsan nibh, sed laoreet
+            nisl vehicula in. Nam sodales dictum lacinia. Vivamus laoreet accumsan justo, vitae accumsan augue sagittis
+            Helli, my name is Grigol Khochiashvili. I built this page to showcase my work as an upcoming Engineer, with
+            a broad spectrum of engineering disciplines encompassing everything from computer/software engineering to
+            mechanical design, along with the diverse fields I'm exploring and aiming to excel in. Lets see if it
+            breaks. Lets see now "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac facilisis ex. Quisque
+            convallis metus vitae urna accumsan, id dapibus ipsum consequat. Fusce accumsan metus nec eros faucibus
+            tincidunt. Phasellus volutpat, elit et blandit aliquet, nisi ligula dapibus dolor, sit amet scelerisque ex
+            <br><br><br><br><br><br><br><br>br<br>ligula ac sapien. Ut in malesuada tortor. Vestibulum ante ipsum primi
+            posuere cubilia Curae; Vestibulum aliquam elit ac odio mollis, quis consequat magna congue. Proin a velit
+            euismod, sodales dui et, faucibus felis. Curabitur elementum varius odio, sed luctus nisi vestibulum non.
+            Nulla id ligula ut leo dictum luctus nec sed quam. Nulla facilisi. Nullam rhoncus accumsan nibh, sed laoreet
+            nisl vehicula in. Nam sodales dictum lacinia. Vivamus laoreet accumsan justo, vitae accumsan augue sagittis
+            Helli, my name is Grigol Khochiashvili. I built this page to showcase my work as an upcoming Engineer, with
+            a broad spectrum of engineering disciplines encompassing everything from computer/software engineering to
+            mechanical design, along with the diverse fields I'm exploring and aiming to excel in. Lets see if it
+            breaks. Lets see now "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac facilisis ex. Quisque
+            convallis metus vitae urna accumsan, id dapibus ipsum consequat. Fusce accumsan metus nec eros faucibus
+            tincidunt. Phasellus volutpat, elit et blandit aliquet, nisi ligula dapibus dolor, sit amet scelerisque ex
+            ligula ac sapien. Ut in malesuada tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+            posuere cubilia Curae; Vestibulum aliquam elit ac odio mollis, quis consequat magna congue. Proin a velit
+            euismod, sodales dui et, faucibus felis. Curabitur elementum varius odio, sed luctus nisi vestibulum non.
+            Nulla id ligula ut leo dictum luctus nec sed quam. Nulla facilisi. Nullam rhoncus accumsan nibh, sed laoreet
+            nisl vehicula in. Nam sodales dictum lacinia. Vivamus laoreet accumsan justo, vitae accumsan augue sagittis
+            at."
+            Helli, my name is Grigol Khochiashvili. I built this page to showcase my work as an upcoming Engineer, with
+            a broad spectrum of engineering disciplines encompassing everything from computer/software engineering to
+            mechanical design, along with the diverse fields I'm exploring and aiming to excel in. Lets see if it
+            breaks. Lets see now "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac facilisis ex. Quisque
+            convallis metus vitae urna accumsan, id dapibus ipsum consequat. Fusce accumsan metus nec eros faucibus
+            tincidunt. Phasellus volutpat, elit et blandit aliquet, nisi ligula dapibus dolor, sit amet scelerisque ex
+            ligula ac sapien. Ut in malesuada tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+            posuere cubilia Curae; Vestibulum aliquam elit ac odio mollis, quis consequat magna congue. Proin a velit
+            euismod, sodales dui et, faucibus felis. Curabitur elementum varius odio, sed luctus nisi vestibulum non.
+            Nulla id ligula ut leo dictum luctus nec sed quam. Nulla facilisi. Nullam rhoncus accumsan nibh, sed laoreet
+            nisl vehicula in. Nam sodales dictum lacinia. Vivamus laoreet accumsan justo, vitae accumsan augue sagittis</p>
+            Lets see now "Lorfem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac facilisis ex. Quisque
+            convallis metus vitae urna accumsan, id dapibus ipsum consequat. Fusce accumsan metus nec eros faucibus
+            tincidunt. Phasellus volutpat, elit et blandit aliquet, nisi ligula dapibus dolor, sit amet scelerisque ex
+            ligula ac sapien. Ut in malesuada tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+            posuere cubilia Curae; Vestibulum aliquam elit ac odio mollis, quis consequat magna congue. Proin a velit
+            euismod, sodales dui et, faucibus felis. Curabitur elementum varius odio, sed luctus nisi vestibulum non.
+            Nulla id ligula ut leo dictum luctus nec sed quam. Nulla facilisi. Nullam rhoncus accumsan nibh, sed laoreet
+            nisl vehicula in. Nam sodales dictum lacinia. Vivamus laoreet accumsan justo, vitae accumsan augue sagittis
+            Helli, my name is Grigol Khochiashvili. I built this page to showcase my work as an upcoming Engineer, with
+            a broad spectrum of engineering disciplines encompassing everything from computer/software engineering to
+            mechanical design, along with the diverse fields I'm exploring and aiming to excel in. Lets see if it
+            breaks. Lets see now "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac facilisis ex. Quisque
+            convallis metus vitae urna accumsan, id dapibus ipsum consequat. Fusce accumsan metus nec eros faucibus
+            tincidunt. Phasellus volutpat, elit et blandit aliquet, nisi ligula dapibus dolor, sit amet scelerisque ex
+            <br><br><br><br><br><br><br><br>br<br>ligula ac sapien. Ut in malesuada tortor. Vestibulum ante ipsum primi
+            posuere cubilia Curae; Vestibulum aliquam elit ac odio mollis, quis consequat magna congue. Proin a velit
+            euismod, sodales dui et, faucibus felis. Curabitur elementum varius odio, sed luctus nisi vestibulum non.
+            Nulla id ligula ut leo dictum luctus nec sed quam. Nulla facilisi. Nullam rhoncus accumsan nibh, sed laoreet
+            nisl vehicula in. Nam sodales dictum lacinia. Vivamus laoreet accumsan justo, vitae accumsan augue sagittis
+            Helli, my name is Grigol Khochiashvili. I built this page to showcase my work as an upcoming Engineer, with
+            a broad spectrum of engineering disciplines encompassing everything from computer/software engineering to
+            mechanical design, along with the diverse fields I'm exploring and aiming to excel in. Lets see if it
+            breaks. Lets see now "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac facilisis ex. Quisque
+            convallis metus vitae urna accumsan, id dapibus ipsum consequat. Fusce accumsan metus nec eros faucibus
+            tincidunt. Phasellus volutpat, elit et blandit aliquet, nisi ligula dapibus dolor, sit amet scelerisque ex
+            ligula ac sapien. Ut in malesuada tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+            posuere cubilia Curae; Vestibulum aliquam elit ac odio mollis, quis consequat magna congue. Proin a velit
+            euismod, sodales dui et, faucibus felis. Curabitur elementum varius odio, sed luctus nisi vestibulum non.
+            Nulla id ligula ut leo dictum luctus nec sed quam. Nulla facilisi. Nullam rhoncus accumsan nibh, sed laoreet
+            nisl vehicula in. Nam sodales dictum lacinia. Vivamus laoreet accumsan justo, vitae accumsan augue sagittis
+            at."
+            Helli, my name is Grigol Khochiashvili. I built this page to showcase my work as an upcoming Engineer, with
+            a broad spectrum of engineering disciplines encompassing everything from computer/software engineering to
+            mechanical design, along with the diverse fields I'm exploring and aiming to excel in. Lets see if it
+            breaks. Lets see now "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac facilisis ex. Quisque
+            convallis metus vitae urna accumsan, id dapibus ipsum consequat. Fusce accumsan metus nec eros faucibus
+            tincidunt. Phasellus volutpat, elit et blandit aliquet, nisi ligula dapibus dolor, sit amet scelerisque ex
+            ligula ac sapien. Ut in malesuada tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+            posuere cubilia Curae; Vestibulum aliquam elit ac odio mollis, quis consequat magna congue. Proin a velit
+            euismod, sodales dui et, faucibus felis. Curabitur elementum varius odio, sed luctus nisi vestibulum non.
+            Nulla id ligula ut leo dictum luctus nec sed quam. Nulla facilisi. Nullam rhoncus accumsan nibh, sed laoreet
+            nisl vehicula in. Nam sodales dictum lacinia. Vivamus laoreet accumsan justo, vitae accumsan augue sagittis</p>
+            Lets see now "Lorfem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac facilisis ex. Quisque
+            convallis metus vitae urna accumsan, id dapibus ipsum consequat. Fusce accumsan metus nec eros faucibus
+            tincidunt. Phasellus volutpat, elit et blandit aliquet, nisi ligula dapibus dolor, sit amet scelerisque ex
+            ligula ac sapien. Ut in malesuada tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+            posuere cubilia Curae; Vestibulum aliquam elit ac odio mollis, quis consequat magna congue. Proin a velit
+            euismod, sodales dui et, faucibus felis. Curabitur elementum varius odio, sed luctus nisi vestibulum non.
+            Nulla id ligula ut leo dictum luctus nec sed quam. Nulla facilisi. Nullam rhoncus accumsan nibh, sed laoreet
+            nisl vehicula in. Nam sodales dictum lacinia. Vivamus laoreet accumsan justo, vitae accumsan augue sagittis
+            Helli, my name is Grigol Khochiashvili. I built this page to showcase my work as an upcoming Engineer, with
+            a broad spectrum of engineering disciplines encompassing everything from computer/software engineering to
+            mechanical design, along with the diverse fields I'm exploring and aiming to excel in. Lets see if it
+            breaks. Lets see now "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac facilisis ex. Quisque
+            convallis metus vitae urna accumsan, id dapibus ipsum consequat. Fusce accumsan metus nec eros faucibus
+            tincidunt. Phasellus volutpat, elit et blandit aliquet, nisi ligula dapibus dolor, sit amet scelerisque ex
+            <br><br><br><br><br><br><br><br>br<br>ligula ac sapien. Ut in malesuada tortor. Vestibulum ante ipsum primi
+            posuere cubilia Curae; Vestibulum aliquam elit ac odio mollis, quis consequat magna congue. Proin a velit
+            euismod, sodales dui et, faucibus felis. Curabitur elementum varius odio, sed luctus nisi vestibulum non.
+            Nulla id ligula ut leo dictum luctus nec sed quam. Nulla facilisi. Nullam rhoncus accumsan nibh, sed laoreet
+            nisl vehicula in. Nam sodales dictum lacinia. Vivamus laoreet accumsan justo, vitae accumsan augue sagittis
+            Helli, my name is Grigol Khochiashvili. I built this page to showcase my work as an upcoming Engineer, with
+            a broad spectrum of engineering disciplines encompassing everything from computer/software engineering to
+            mechanical design, along with the diverse fields I'm exploring and aiming to excel in. Lets see if it
+            breaks. Lets see now "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac facilisis ex. Quisque
+            convallis metus vitae urna accumsan, id dapibus ipsum consequat. Fusce accumsan metus nec eros faucibus
+            tincidunt. Phasellus volutpat, elit et blandit aliquet, nisi ligula dapibus dolor, sit amet scelerisque ex
+            ligula ac sapien. Ut in malesuada tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+            posuere cubilia Curae; Vestibulum aliquam elit ac odio mollis, quis consequat magna congue. Proin a velit
+            euismod, sodales dui et, faucibus felis. Curabitur elementum varius odio, sed luctus nisi vestibulum non.
+            Nulla id ligula ut leo dictum luctus nec sed quam. Nulla facilisi. Nullam rhoncus accumsan nibh, sed laoreet
+            nisl vehicula in. Nam sodales dictum lacinia. Vivamus laoreet accumsan justo, vitae accumsan augue sagittis
+            at."
+            Helli, my name is Grigol Khochiashvili. I built this page to showcase my work as an upcoming Engineer, with
+            a broad spectrum of engineering disciplines encompassing everything from computer/software engineering to
+            mechanical design, along with the diverse fields I'm exploring and aiming to excel in. Lets see if it
+            breaks. Lets see now "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac facilisis ex. Quisque
+            convallis metus vitae urna accumsan, id dapibus ipsum consequat. Fusce accumsan metus nec eros faucibus
+            tincidunt. Phasellus volutpat, elit et blandit aliquet, nisi ligula dapibus dolor, sit amet scelerisque ex
+            ligula ac sapien. Ut in malesuada tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+            posuere cubilia Curae; Vestibulum aliquam elit ac odio mollis, quis consequat magna congue. Proin a velit
+            euismod, sodales dui et, faucibus felis. Curabitur elementum varius odio, sed luctus nisi vestibulum non.
+            Nulla id ligula ut leo dictum luctus nec sed quam. Nulla facilisi. Nullam rhoncus accumsan nibh, sed laoreet
+            nisl vehicula in. Nam sodales dictum lacinia. Vivamus laoreet accumsan justo, vitae accumsan augue sagittis</p>
+            Lets see now "Lorfem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac facilisis ex. Quisque
+            convallis metus vitae urna accumsan, id dapibus ipsum consequat. Fusce accumsan metus nec eros faucibus
+            tincidunt. Phasellus volutpat, elit et blandit aliquet, nisi ligula dapibus dolor, sit amet scelerisque ex
+            ligula ac sapien. Ut in malesuada tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+            posuere cubilia Curae; Vestibulum aliquam elit ac odio mollis, quis consequat magna congue. Proin a velit
+            euismod, sodales dui et, faucibus felis. Curabitur elementum varius odio, sed luctus nisi vestibulum non.
+            Nulla id ligula ut leo dictum luctus nec sed quam. Nulla facilisi. Nullam rhoncus accumsan nibh, sed laoreet
+            nisl vehicula in. Nam sodales dictum lacinia. Vivamus laoreet accumsan justo, vitae accumsan augue sagittis
+            Helli, my name is Grigol Khochiashvili. I built this page to showcase my work as an upcoming Engineer, with
+            a broad spectrum of engineering disciplines encompassing everything from computer/software engineering to
+            mechanical design, along with the diverse fields I'm exploring and aiming to excel in. Lets see if it
+            breaks. Lets see now "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac facilisis ex. Quisque
+            convallis metus vitae urna accumsan, id dapibus ipsum consequat. Fusce accumsan metus nec eros faucibus
+            tincidunt. Phasellus volutpat, elit et blandit aliquet, nisi ligula dapibus dolor, sit amet scelerisque ex
+            <br><br><br><br><br><br><br><br>br<br>ligula ac sapien. Ut in malesuada tortor. Vestibulum ante ipsum primi
+            posuere cubilia Curae; Vestibulum aliquam elit ac odio mollis, quis consequat magna congue. Proin a velit
+            euismod, sodales dui et, faucibus felis. Curabitur elementum varius odio, sed luctus nisi vestibulum non.
+            Nulla id ligula ut leo dictum luctus nec sed quam. Nulla facilisi. Nullam rhoncus accumsan nibh, sed laoreet
+            nisl vehicula in. Nam sodales dictum lacinia. Vivamus laoreet accumsan justo, vitae accumsan augue sagittis
+            Helli, my name is Grigol Khochiashvili. I built this page to showcase my work as an upcoming Engineer, with
+            a broad spectrum of engineering disciplines encompassing everything from computer/software engineering to
+            mechanical design, along with the diverse fields I'm exploring and aiming to excel in. Lets see if it
+            breaks. Lets see now "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac facilisis ex. Quisque
+            convallis metus vitae urna accumsan, id dapibus ipsum consequat. Fusce accumsan metus nec eros faucibus
+            tincidunt. Phasellus volutpat, elit et blandit aliquet, nisi ligula dapibus dolor, sit amet scelerisque ex
+            ligula ac sapien. Ut in malesuada tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+            posuere cubilia Curae; Vestibulum aliquam elit ac odio mollis, quis consequat magna congue. Proin a velit
+            euismod, sodales dui et, faucibus felis. Curabitur elementum varius odio, sed luctus nisi vestibulum non.
+            Nulla id ligula ut leo dictum luctus nec sed quam. Nulla facilisi. Nullam rhoncus accumsan nibh, sed laoreet
+            nisl vehicula in. Nam sodales dictum lacinia. Vivamus laoreet accumsan justo, vitae accumsan augue sagittis
+            at."
+            Helli, my name is Grigol Khochiashvili. I built this page to showcase my work as an upcoming Engineer, with
+            a broad spectrum of engineering disciplines encompassing everything from computer/software engineering to
+            mechanical design, along with the diverse fields I'm exploring and aiming to excel in. Lets see if it
+            breaks. Lets see now "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac facilisis ex. Quisque
+            convallis metus vitae urna accumsan, id dapibus ipsum consequat. Fusce accumsan metus nec eros faucibus
+            tincidunt. Phasellus volutpat, elit et blandit aliquet, nisi ligula dapibus dolor, sit amet scelerisque ex
+            ligula ac sapien. Ut in malesuada tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+            posuere cubilia Curae; Vestibulum aliquam elit ac odio mollis, quis consequat magna congue. Proin a velit
+            euismod, sodales dui et, faucibus felis. Curabitur elementum varius odio, sed luctus nisi vestibulum non.
+            Nulla id ligula ut leo dictum luctus nec sed quam. Nulla facilisi. Nullam rhoncus accumsan nibh, sed laoreet
+            nisl vehicula in. Nam sodales dictum lacinia. Vivamus laoreet accumsan justo, vitae accumsan augue sagittis</p>
+            Lets see now "Lorfem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac facilisis ex. Quisque
+            convallis metus vitae urna accumsan, id dapibus ipsum consequat. Fusce accumsan metus nec eros faucibus
+            tincidunt. Phasellus volutpat, elit et blandit aliquet, nisi ligula dapibus dolor, sit amet scelerisque ex
+            ligula ac sapien. Ut in malesuada tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+            posuere cubilia Curae; Vestibulum aliquam elit ac odio mollis, quis consequat magna congue. Proin a velit
+            euismod, sodales dui et, faucibus felis. Curabitur elementum varius odio, sed luctus nisi vestibulum non.
+            Nulla id ligula ut leo dictum luctus nec sed quam. Nulla facilisi. Nullam rhoncus accumsan nibh, sed laoreet
+            nisl vehicula in. Nam sodales dictum lacinia. Vivamus laoreet accumsan justo, vitae accumsan augue sagittis
+            Helli, my name is Grigol Khochiashvili. I built this page to showcase my work as an upcoming Engineer, with
+            a broad spectrum of engineering disciplines encompassing everything from computer/software engineering to
+            mechanical design, along with the diverse fields I'm exploring and aiming to excel in. Lets see if it
+            breaks. Lets see now "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac facilisis ex. Quisque
+            convallis metus vitae urna accumsan, id dapibus ipsum consequat. Fusce accumsan metus nec eros faucibus
+            tincidunt. Phasellus volutpat, elit et blandit aliquet, nisi ligula dapibus dolor, sit amet scelerisque ex
+            <br><br><br><br><br><br><br><br>br<br>ligula ac sapien. Ut in malesuada tortor. Vestibulum ante ipsum primi
+            posuere cubilia Curae; Vestibulum aliquam elit ac odio mollis, quis consequat magna congue. Proin a velit
+            euismod, sodales dui et, faucibus felis. Curabitur elementum varius odio, sed luctus nisi vestibulum non.
+            Nulla id ligula ut leo dictum luctus nec sed quam. Nulla facilisi. Nullam rhoncus accumsan nibh, sed laoreet
+            nisl vehicula in. Nam sodales dictum lacinia. Vivamus laoreet accumsan justo, vitae accumsan augue sagittis
+            Helli, my name is Grigol Khochiashvili. I built this page to showcase my work as an upcoming Engineer, with
+            a broad spectrum of engineering disciplines encompassing everything from computer/software engineering to
+            mechanical design, along with the diverse fields I'm exploring and aiming to excel in. Lets see if it
+            breaks. Lets see now "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac facilisis ex. Quisque
+            convallis metus vitae urna accumsan, id dapibus ipsum consequat. Fusce accumsan metus nec eros faucibus
+            tincidunt. Phasellus volutpat, elit et blandit aliquet, nisi ligula dapibus dolor, sit amet scelerisque ex
+            ligula ac sapien. Ut in malesuada tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+            posuere cubilia Curae; Vestibulum aliquam elit ac odio mollis, quis consequat magna congue. Proin a velit
+            euismod, sodales dui et, faucibus felis. Curabitur elementum varius odio, sed luctus nisi vestibulum non.
+            Nulla id ligula ut leo dictum luctus nec sed quam. Nulla facilisi. Nullam rhoncus accumsan nibh, sed laoreet
+            nisl vehicula in. Nam sodales dictum lacinia. Vivamus laoreet accumsan justo, vitae accumsan augue sagittis
+            at."
+            Helli, my name is Grigol Khochiashvili. I built this page to showcase my work as an upcoming Engineer, with
+            a broad spectrum of engineering disciplines encompassing everything from computer/software engineering to
+            mechanical design, along with the diverse fields I'm exploring and aiming to excel in. Lets see if it
+            breaks. Lets see now "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac facilisis ex. Quisque
+            convallis metus vitae urna accumsan, id dapibus ipsum consequat. Fusce accumsan metus nec eros faucibus
+            tincidunt. Phasellus volutpat, elit et blandit aliquet, nisi ligula dapibus dolor, sit amet scelerisque ex
+            ligula ac sapien. Ut in malesuada tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+            posuere cubilia Curae; Vestibulum aliquam elit ac odio mollis, quis consequat magna congue. Proin a velit
+            euismod, sodales dui et, faucibus felis. Curabitur elementum varius odio, sed luctus nisi vestibulum non.
+            Nulla id ligula ut leo dictum luctus nec sed quam. Nulla facilisi. Nullam rhoncus accumsan nibh, sed laoreet
+            nisl vehicula in. Nam sodales dictum lacinia. Vivamus laoreet accumsan justo, vitae accumsan augue sagittis</p>
+            Lets see now "Lorfem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac facilisis ex. Quisque
+            convallis metus vitae urna accumsan, id dapibus ipsum consequat. Fusce accumsan metus nec eros faucibus
+            tincidunt. Phasellus volutpat, elit et blandit aliquet, nisi ligula dapibus dolor, sit amet scelerisque ex
+            ligula ac sapien. Ut in malesuada tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+            posuere cubilia Curae; Vestibulum aliquam elit ac odio mollis, quis consequat magna congue. Proin a velit
+            euismod, sodales dui et, faucibus felis. Curabitur elementum varius odio, sed luctus nisi vestibulum non.
+            Nulla id ligula ut leo dictum luctus nec sed quam. Nulla facilisi. Nullam rhoncus accumsan nibh, sed laoreet
+            nisl vehicula in. Nam sodales dictum lacinia. Vivamus laoreet accumsan justo, vitae accumsan augue sagittis
+            Helli, my name is Grigol Khochiashvili. I built this page to showcase my work as an upcoming Engineer, with
+            a broad spectrum of engineering disciplines encompassing everything from computer/software engineering to
+            mechanical design, along with the diverse fields I'm exploring and aiming to excel in. Lets see if it
+            breaks. Lets see now "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac facilisis ex. Quisque
+            convallis metus vitae urna accumsan, id dapibus ipsum consequat. Fusce accumsan metus nec eros faucibus
+            tincidunt. Phasellus volutpat, elit et blandit aliquet, nisi ligula dapibus dolor, sit amet scelerisque ex
+            <br><br><br><br><br><br><br><br>br<br>ligula ac sapien. Ut in malesuada tortor. Vestibulum ante ipsum primi
+            posuere cubilia Curae; Vestibulum aliquam elit ac odio mollis, quis consequat magna congue. Proin a velit
+            euismod, sodales dui et, faucibus felis. Curabitur elementum varius odio, sed luctus nisi vestibulum non.
+            Nulla id ligula ut leo dictum luctus nec sed quam. Nulla facilisi. Nullam rhoncus accumsan nibh, sed laoreet
+            nisl vehicula in. Nam sodales dictum lacinia. Vivamus laoreet accumsan justo, vitae accumsan augue sagittis
+            Helli, my name is Grigol Khochiashvili. I built this page to showcase my work as an upcoming Engineer, with
+            a broad spectrum of engineering disciplines encompassing everything from computer/software engineering to
+            mechanical design, along with the diverse fields I'm exploring and aiming to excel in. Lets see if it
+            breaks. Lets see now "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac facilisis ex. Quisque
+            convallis metus vitae urna accumsan, id dapibus ipsum consequat. Fusce accumsan metus nec eros faucibus
+            tincidunt. Phasellus volutpat, elit et blandit aliquet, nisi ligula dapibus dolor, sit amet scelerisque ex
+            ligula ac sapien. Ut in malesuada tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+            posuere cubilia Curae; Vestibulum aliquam elit ac odio mollis, quis consequat magna congue. Proin a velit
+            euismod, sodales dui et, faucibus felis. Curabitur elementum varius odio, sed luctus nisi vestibulum non.
+            Nulla id ligula ut leo dictum luctus nec sed quam. Nulla facilisi. Nullam rhoncus accumsan nibh, sed laoreet
+            nisl vehicula in. Nam sodales dictum lacinia. Vivamus laoreet accumsan justo, vitae accumsan augue sagittis
+            at."
+            Helli, my name is Grigol Khochiashvili. I built this page to showcase my work as an upcoming Engineer, with
+            a broad spectrum of engineering disciplines encompassing everything from computer/software engineering to
+            mechanical design, along with the diverse fields I'm exploring and aiming to excel in. Lets see if it
+            breaks. Lets see now "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac facilisis ex. Quisque
+            convallis metus vitae urna accumsan, id dapibus ipsum consequat. Fusce accumsan metus nec eros faucibus
+            tincidunt. Phasellus volutpat, elit et blandit aliquet, nisi ligula dapibus dolor, sit amet scelerisque ex
+            ligula ac sapien. Ut in malesuada tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+            posuere cubilia Curae; Vestibulum aliquam elit ac odio mollis, quis consequat magna congue. Proin a velit
+            euismod, sodales dui et, faucibus felis. Curabitur elementum varius odio, sed luctus nisi vestibulum non.
+            Nulla id ligula ut leo dictum luctus nec sed quam. Nulla facilisi. Nullam rhoncus accumsan nibh, sed laoreet
+            nisl vehicula in. Nam sodales dictum lacinia. Vivamus laoreet accumsan justo, vitae accumsan augue sagittis</p>
+            Lets see now "Lorfem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac facilisis ex. Quisque
+            convallis metus vitae urna accumsan, id dapibus ipsum consequat. Fusce accumsan metus nec eros faucibus
+            tincidunt. Phasellus volutpat, elit et blandit aliquet, nisi ligula dapibus dolor, sit amet scelerisque ex
+            ligula ac sapien. Ut in malesuada tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+            posuere cubilia Curae; Vestibulum aliquam elit ac odio mollis, quis consequat magna congue. Proin a velit
+            euismod, sodales dui et, faucibus felis. Curabitur elementum varius odio, sed luctus nisi vestibulum non.
+            Nulla id ligula ut leo dictum luctus nec sed quam. Nulla facilisi. Nullam rhoncus accumsan nibh, sed laoreet
+            nisl vehicula in. Nam sodales dictum lacinia. Vivamus laoreet accumsan justo, vitae accumsan augue sagittis
+            Helli, my name is Grigol Khochiashvili. I built this page to showcase my work as an upcoming Engineer, with
+            a broad spectrum of engineering disciplines encompassing everything from computer/software engineering to
+            mechanical design, along with the diverse fields I'm exploring and aiming to excel in. Lets see if it
+            breaks. Lets see now "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac facilisis ex. Quisque
+            convallis metus vitae urna accumsan, id dapibus ipsum consequat. Fusce accumsan metus nec eros faucibus
+            tincidunt. Phasellus volutpat, elit et blandit aliquet, nisi ligula dapibus dolor, sit amet scelerisque ex
+            <br><br><br><br><br><br><br><br>br<br>ligula ac sapien. Ut in malesuada tortor. Vestibulum ante ipsum primi
+            posuere cubilia Curae; Vestibulum aliquam elit ac odio mollis, quis consequat magna congue. Proin a velit
+            euismod, sodales dui et, faucibus felis. Curabitur elementum varius odio, sed luctus nisi vestibulum non.
+            Nulla id ligula ut leo dictum luctus nec sed quam. Nulla facilisi. Nullam rhoncus accumsan nibh, sed laoreet
+            nisl vehicula in. Nam sodales dictum lacinia. Vivamus laoreet accumsan justo, vitae accumsan augue sagittis
+            Helli, my name is Grigol Khochiashvili. I built this page to showcase my work as an upcoming Engineer, with
+            a broad spectrum of engineering disciplines encompassing everything from computer/software engineering to
+            mechanical design, along with the diverse fields I'm exploring and aiming to excel in. Lets see if it
+            breaks. Lets see now "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac facilisis ex. Quisque
+            convallis metus vitae urna accumsan, id dapibus ipsum consequat. Fusce accumsan metus nec eros faucibus
+            tincidunt. Phasellus volutpat, elit et blandit aliquet, nisi ligula dapibus dolor, sit amet scelerisque ex
+            ligula ac sapien. Ut in malesuada tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+            posuere cubilia Curae; Vestibulum aliquam elit ac odio mollis, quis consequat magna congue. Proin a velit
+            euismod, sodales dui et, faucibus felis. Curabitur elementum varius odio, sed luctus nisi vestibulum non.
+            Nulla id ligula ut leo dictum luctus nec sed quam. Nulla facilisi. Nullam rhoncus accumsan nibh, sed laoreet
+            nisl vehicula in. Nam sodales dictum lacinia. Vivamus laoreet accumsan justo, vitae accumsan augue sagittis
+            at."
+            Helli, my name is Grigol Khochiashvili. I built this page to showcase my work as an upcoming Engineer, with
+            a broad spectrum of engineering disciplines encompassing everything from computer/software engineering to
+            mechanical design, along with the diverse fields I'm exploring and aiming to excel in. Lets see if it
+            breaks. Lets see now "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac facilisis ex. Quisque
+            convallis metus vitae urna accumsan, id dapibus ipsum consequat. Fusce accumsan metus nec eros faucibus
+            tincidunt. Phasellus volutpat, elit et blandit aliquet, nisi ligula dapibus dolor, sit amet scelerisque ex
+            ligula ac sapien. Ut in malesuada tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+            posuere cubilia Curae; Vestibulum aliquam elit ac odio mollis, quis consequat magna congue. Proin a velit
+            euismod, sodales dui et, faucibus felis. Curabitur elementum varius odio, sed luctus nisi vestibulum non.
+            Nulla id ligula ut leo dictum luctus nec sed quam. Nulla facilisi. Nullam rhoncus accumsan nibh, sed laoreet
+            nisl vehicula in. Nam sodales dictum lacinia. Vivamus laoreet accumsan justo, vitae accumsan augue sagittis</p>
+            Lets see now "Lorfem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac facilisis ex. Quisque
+            convallis metus vitae urna accumsan, id dapibus ipsum consequat. Fusce accumsan metus nec eros faucibus
+            tincidunt. Phasellus volutpat, elit et blandit aliquet, nisi ligula dapibus dolor, sit amet scelerisque ex
+            ligula ac sapien. Ut in malesuada tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+            posuere cubilia Curae; Vestibulum aliquam elit ac odio mollis, quis consequat magna congue. Proin a velit
+            euismod, sodales dui et, faucibus felis. Curabitur elementum varius odio, sed luctus nisi vestibulum non.
+            Nulla id ligula ut leo dictum luctus nec sed quam. Nulla facilisi. Nullam rhoncus accumsan nibh, sed laoreet
+            nisl vehicula in. Nam sodales dictum lacinia. Vivamus laoreet accumsan justo, vitae accumsan augue sagittis
+            Helli, my name is Grigol Khochiashvili. I built this page to showcase my work as an upcoming Engineer, with
+            a broad spectrum of engineering disciplines encompassing everything from computer/software engineering to
+            mechanical design, along with the diverse fields I'm exploring and aiming to excel in. Lets see if it
+            breaks. Lets see now "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac facilisis ex. Quisque
+            convallis metus vitae urna accumsan, id dapibus ipsum consequat. Fusce accumsan metus nec eros faucibus
+            tincidunt. Phasellus volutpat, elit et blandit aliquet, nisi ligula dapibus dolor, sit amet scelerisque ex
+            <br><br><br><br><br><br><br><br>br<br>ligula ac sapien. Ut in malesuada tortor. Vestibulum ante ipsum primi
+            posuere cubilia Curae; Vestibulum aliquam elit ac odio mollis, quis consequat magna congue. Proin a velit
+            euismod, sodales dui et, faucibus felis. Curabitur elementum varius odio, sed luctus nisi vestibulum non.
+            Nulla id ligula ut leo dictum luctus nec sed quam. Nulla facilisi. Nullam rhoncus accumsan nibh, sed laoreet
+            nisl vehicula in. Nam sodales dictum lacinia. Vivamus laoreet accumsan justo, vitae accumsan augue sagittis
+            Helli, my name is Grigol Khochiashvili. I built this page to showcase my work as an upcoming Engineer, with
+            a broad spectrum of engineering disciplines encompassing everything from computer/software engineering to
+            mechanical design, along with the diverse fields I'm exploring and aiming to excel in. Lets see if it
+            breaks. Lets see now "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac facilisis ex. Quisque
+            convallis metus vitae urna accumsan, id dapibus ipsum consequat. Fusce accumsan metus nec eros faucibus
+            tincidunt. Phasellus volutpat, elit et blandit aliquet, nisi ligula dapibus dolor, sit amet scelerisque ex
+            ligula ac sapien. Ut in malesuada tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+            posuere cubilia Curae; Vestibulum aliquam elit ac odio mollis, quis consequat magna congue. Proin a velit
+            euismod, sodales dui et, faucibus felis. Curabitur elementum varius odio, sed luctus nisi vestibulum non.
+            Nulla id ligula ut leo dictum luctus nec sed quam. Nulla facilisi. Nullam rhoncus accumsan nibh, sed laoreet
+            nisl vehicula in. Nam sodales dictum lacinia. Vivamus laoreet accumsan justo, vitae accumsan augue sagittis
+            at."
+            Helli, my name is Grigol Khochiashvili. I built this page to showcase my work as an upcoming Engineer, with
+            a broad spectrum of engineering disciplines encompassing everything from computer/software engineering to
+            mechanical design, along with the diverse fields I'm exploring and aiming to excel in. Lets see if it
+            breaks. Lets see now "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac facilisis ex. Quisque
+            convallis metus vitae urna accumsan, id dapibus ipsum consequat. Fusce accumsan metus nec eros faucibus
+            tincidunt. Phasellus volutpat, elit et blandit aliquet, nisi ligula dapibus dolor, sit amet scelerisque ex
+            ligula ac sapien. Ut in malesuada tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+            posuere cubilia Curae; Vestibulum aliquam elit ac odio mollis, quis consequat magna congue. Proin a velit
+            euismod, sodales dui et, faucibus felis. Curabitur elementum varius odio, sed luctus nisi vestibulum non.
+            Nulla id ligula ut leo dictum luctus nec sed quam. Nulla facilisi. Nullam rhoncus accumsan nibh, sed laoreet
+            nisl vehicula in. Nam sodales dictum lacinia. Vivamus laoreet accumsan justo, vitae accumsan augue sagittis</p>
+            Lets see now "Lorfem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac facilisis ex. Quisque
+            convallis metus vitae urna accumsan, id dapibus ipsum consequat. Fusce accumsan metus nec eros faucibus
+            tincidunt. Phasellus volutpat, elit et blandit aliquet, nisi ligula dapibus dolor, sit amet scelerisque ex
+            ligula ac sapien. Ut in malesuada tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+            posuere cubilia Curae; Vestibulum aliquam elit ac odio mollis, quis consequat magna congue. Proin a velit
+            euismod, sodales dui et, faucibus felis. Curabitur elementum varius odio, sed luctus nisi vestibulum non.
+            Nulla id ligula ut leo dictum luctus nec sed quam. Nulla facilisi. Nullam rhoncus accumsan nibh, sed laoreet
+            nisl vehicula in. Nam sodales dictum lacinia. Vivamus laoreet accumsan justo, vitae accumsan augue sagittis
+            Helli, my name is Grigol Khochiashvili. I built this page to showcase my work as an upcoming Engineer, with
+            a broad spectrum of engineering disciplines encompassing everything from computer/software engineering to
+            mechanical design, along with the diverse fields I'm exploring and aiming to excel in. Lets see if it
+            breaks. Lets see now "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac facilisis ex. Quisque
+            convallis metus vitae urna accumsan, id dapibus ipsum consequat. Fusce accumsan metus nec eros faucibus
+            tincidunt. Phasellus volutpat, elit et blandit aliquet, nisi ligula dapibus dolor, sit amet scelerisque ex
+            <br><br><br><br><br><br><br><br>br<br>ligula ac sapien. Ut in malesuada tortor. Vestibulum ante ipsum primi
+            posuere cubilia Curae; Vestibulum aliquam elit ac odio mollis, quis consequat magna congue. Proin a velit
+            euismod, sodales dui et, faucibus felis. Curabitur elementum varius odio, sed luctus nisi vestibulum non.
+            Nulla id ligula ut leo dictum luctus nec sed quam. Nulla facilisi. Nullam rhoncus accumsan nibh, sed laoreet
+            nisl vehicula in. Nam sodales dictum lacinia. Vivamus laoreet accumsan justo, vitae accumsan augue sagittis
+            Helli, my name is Grigol Khochiashvili. I built this page to showcase my work as an upcoming Engineer, with
+            a broad spectrum of engineering disciplines encompassing everything from computer/software engineering to
+            mechanical design, along with the diverse fields I'm exploring and aiming to excel in. Lets see if it
+            breaks. Lets see now "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac facilisis ex. Quisque
+            convallis metus vitae urna accumsan, id dapibus ipsum consequat. Fusce accumsan metus nec eros faucibus
+            tincidunt. Phasellus volutpat, elit et blandit aliquet, nisi ligula dapibus dolor, sit amet scelerisque ex
+            ligula ac sapien. Ut in malesuada tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+            posuere cubilia Curae; Vestibulum aliquam elit ac odio mollis, quis consequat magna congue. Proin a velit
+            euismod, sodales dui et, faucibus felis. Curabitur elementum varius odio, sed luctus nisi vestibulum non.
+            Nulla id ligula ut leo dictum luctus nec sed quam. Nulla facilisi. Nullam rhoncus accumsan nibh, sed laoreet
+            nisl vehicula in. Nam sodales dictum lacinia. Vivamus laoreet accumsan justo, vitae accumsan augue sagittis
+            at."
+            Helli, my name is Grigol Khochiashvili. I built this page to showcase my work as an upcoming Engineer, with
+            a broad spectrum of engineering disciplines encompassing everything from computer/software engineering to
+            mechanical design, along with the diverse fields I'm exploring and aiming to excel in. Lets see if it
+            breaks. Lets see now "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac facilisis ex. Quisque
+            convallis metus vitae urna accumsan, id dapibus ipsum consequat. Fusce accumsan metus nec eros faucibus
+            tincidunt. Phasellus volutpat, elit et blandit aliquet, nisi ligula dapibus dolor, sit amet scelerisque ex
+            ligula ac sapien. Ut in malesuada tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+            posuere cubilia Curae; Vestibulum aliquam elit ac odio mollis, quis consequat magna congue. Proin a velit
+            euismod, sodales dui et, faucibus felis. Curabitur elementum varius odio, sed luctus nisi vestibulum non.
+            Nulla id ligula ut leo dictum luctus nec sed quam. Nulla facilisi. Nullam rhoncus accumsan nibh, sed laoreet
+            nisl vehicula in. Nam sodales dictum lacinia. Vivamus laoreet accumsan justo, vitae accumsan augue sagittis</p>
+            Lets see now "Lorfem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac facilisis ex. Quisque
+            convallis metus vitae urna accumsan, id dapibus ipsum consequat. Fusce accumsan metus nec eros faucibus
+            tincidunt. Phasellus volutpat, elit et blandit aliquet, nisi ligula dapibus dolor, sit amet scelerisque ex
+            ligula ac sapien. Ut in malesuada tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+            posuere cubilia Curae; Vestibulum aliquam elit ac odio mollis, quis consequat magna congue. Proin a velit
+            euismod, sodales dui et, faucibus felis. Curabitur elementum varius odio, sed luctus nisi vestibulum non.
+            Nulla id ligula ut leo dictum luctus nec sed quam. Nulla facilisi. Nullam rhoncus accumsan nibh, sed laoreet
+            nisl vehicula in. Nam sodales dictum lacinia. Vivamus laoreet accumsan justo, vitae accumsan augue sagittis
+            Helli, my name is Grigol Khochiashvili. I built this page to showcase my work as an upcoming Engineer, with
+            a broad spectrum of engineering disciplines encompassing everything from computer/software engineering to
+            mechanical design, along with the diverse fields I'm exploring and aiming to excel in. Lets see if it
+            breaks. Lets see now "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac facilisis ex. Quisque
+            convallis metus vitae urna accumsan, id dapibus ipsum consequat. Fusce accumsan metus nec eros faucibus
+            tincidunt. Phasellus volutpat, elit et blandit aliquet, nisi ligula dapibus dolor, sit amet scelerisque ex
+            <br><br><br><br><br><br><br><br>br<br>ligula ac sapien. Ut in malesuada tortor. Vestibulum ante ipsum primi
+            posuere cubilia Curae; Vestibulum aliquam elit ac odio mollis, quis consequat magna congue. Proin a velit
+            euismod, sodales dui et, faucibus felis. Curabitur elementum varius odio, sed luctus nisi vestibulum non.
+            Nulla id ligula ut leo dictum luctus nec sed quam. Nulla facilisi. Nullam rhoncus accumsan nibh, sed laoreet
+            nisl vehicula in. Nam sodales dictum lacinia. Vivamus laoreet accumsan justo, vitae accumsan augue sagittis
+            Helli, my name is Grigol Khochiashvili. I built this page to showcase my work as an upcoming Engineer, with
+            a broad spectrum of engineering disciplines encompassing everything from computer/software engineering to
+            mechanical design, along with the diverse fields I'm exploring and aiming to excel in. Lets see if it
+            breaks. Lets see now "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac facilisis ex. Quisque
+            convallis metus vitae urna accumsan, id dapibus ipsum consequat. Fusce accumsan metus nec eros faucibus
+            tincidunt. Phasellus volutpat, elit et blandit aliquet, nisi ligula dapibus dolor, sit amet scelerisque ex
+            ligula ac sapien. Ut in malesuada tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+            posuere cubilia Curae; Vestibulum aliquam elit ac odio mollis, quis consequat magna congue. Proin a velit
+            euismod, sodales dui et, faucibus felis. Curabitur elementum varius odio, sed luctus nisi vestibulum non.
+            Nulla id ligula ut leo dictum luctus nec sed quam. Nulla facilisi. Nullam rhoncus accumsan nibh, sed laoreet
+            nisl vehicula in. Nam sodales dictum lacinia. Vivamus laoreet accumsan justo, vitae accumsan augue sagittis
+            at."
+            Helli, my name is Grigol Khochiashvili. I built this page to showcase my work as an upcoming Engineer, with
+            a broad spectrum of engineering disciplines encompassing everything from computer/software engineering to
+            mechanical design, along with the diverse fields I'm exploring and aiming to excel in. Lets see if it
+            breaks. Lets see now "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac facilisis ex. Quisque
+            convallis metus vitae urna accumsan, id dapibus ipsum consequat. Fusce accumsan metus nec eros faucibus
+            tincidunt. Phasellus volutpat, elit et blandit aliquet, nisi ligula dapibus dolor, sit amet scelerisque ex
+            ligula ac sapien. Ut in malesuada tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+            posuere cubilia Curae; Vestibulum aliquam elit ac odio mollis, quis consequat magna congue. Proin a velit
+            euismod, sodales dui et, faucibus felis. Curabitur elementum varius odio, sed luctus nisi vestibulum non.
+            Nulla id ligula ut leo dictum luctus nec sed quam. Nulla facilisi. Nullam rhoncus accumsan nibh, sed laoreet
+            nisl vehicula in. Nam sodales dictum lacinia. Vivamus laoreet accumsan justo, vitae accumsan augue sagittis</p>
+            Lets see now "Lorfem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac facilisis ex. Quisque
+            convallis metus vitae urna accumsan, id dapibus ipsum consequat. Fusce accumsan metus nec eros faucibus
+            tincidunt. Phasellus volutpat, elit et blandit aliquet, nisi ligula dapibus dolor, sit amet scelerisque ex
+            ligula ac sapien. Ut in malesuada tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+            posuere cubilia Curae; Vestibulum aliquam elit ac odio mollis, quis consequat magna congue. Proin a velit
+            euismod, sodales dui et, faucibus felis. Curabitur elementum varius odio, sed luctus nisi vestibulum non.
+            Nulla id ligula ut leo dictum luctus nec sed quam. Nulla facilisi. Nullam rhoncus accumsan nibh, sed laoreet
+            nisl vehicula in. Nam sodales dictum lacinia. Vivamus laoreet accumsan justo, vitae accumsan augue sagittis
+            Helli, my name is Grigol Khochiashvili. I built this page to showcase my work as an upcoming Engineer, with
+            a broad spectrum of engineering disciplines encompassing everything from computer/software engineering to
+            mechanical design, along with the diverse fields I'm exploring and aiming to excel in. Lets see if it
+            breaks. Lets see now "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac facilisis ex. Quisque
+            convallis metus vitae urna accumsan, id dapibus ipsum consequat. Fusce accumsan metus nec eros faucibus
+            tincidunt. Phasellus volutpat, elit et blandit aliquet, nisi ligula dapibus dolor, sit amet scelerisque ex
+            <br><br><br><br><br><br><br><br>br<br>ligula ac sapien. Ut in malesuada tortor. Vestibulum ante ipsum primi
+            posuere cubilia Curae; Vestibulum aliquam elit ac odio mollis, quis consequat magna congue. Proin a velit
+            euismod, sodales dui et, faucibus felis. Curabitur elementum varius odio, sed luctus nisi vestibulum non.
+            Nulla id ligula ut leo dictum luctus nec sed quam. Nulla facilisi. Nullam rhoncus accumsan nibh, sed laoreet
+            nisl vehicula in. Nam sodales dictum lacinia. Vivamus laoreet accumsan justo, vitae accumsan augue sagittis
+            Helli, my name is Grigol Khochiashvili. I built this page to showcase my work as an upcoming Engineer, with
+            a broad spectrum of engineering disciplines encompassing everything from computer/software engineering to
+            mechanical design, along with the diverse fields I'm exploring and aiming to excel in. Lets see if it
+            breaks. Lets see now "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac facilisis ex. Quisque
+            convallis metus vitae urna accumsan, id dapibus ipsum consequat. Fusce accumsan metus nec eros faucibus
+            tincidunt. Phasellus volutpat, elit et blandit aliquet, nisi ligula dapibus dolor, sit amet scelerisque ex
+            ligula ac sapien. Ut in malesuada tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+            posuere cubilia Curae; Vestibulum aliquam elit ac odio mollis, quis consequat magna congue. Proin a velit
+            euismod, sodales dui et, faucibus felis. Curabitur elementum varius odio, sed luctus nisi vestibulum non.
+            Nulla id ligula ut leo dictum luctus nec sed quam. Nulla facilisi. Nullam rhoncus accumsan nibh, sed laoreet
+            nisl vehicula in. Nam sodales dictum lacinia. Vivamus laoreet accumsan justo, vitae accumsan augue sagittis
+            at."
+            Helli, my name is Grigol Khochiashvili. I built this page to showcase my work as an upcoming Engineer, with
+            a broad spectrum of engineering disciplines encompassing everything from computer/software engineering to
+            mechanical design, along with the diverse fields I'm exploring and aiming to excel in. Lets see if it
+            breaks. Lets see now "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac facilisis ex. Quisque
+            convallis metus vitae urna accumsan, id dapibus ipsum consequat. Fusce accumsan metus nec eros faucibus
+            tincidunt. Phasellus volutpat, elit et blandit aliquet, nisi ligula dapibus dolor, sit amet scelerisque ex
+            ligula ac sapien. Ut in malesuada tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+            posuere cubilia Curae; Vestibulum aliquam elit ac odio mollis, quis consequat magna congue. Proin a velit
+            euismod, sodales dui et, faucibus felis. Curabitur elementum varius odio, sed luctus nisi vestibulum non.
+            Nulla id ligula ut leo dictum luctus nec sed quam. Nulla facilisi. Nullam rhoncus accumsan nibh, sed laoreet
+            nisl vehicula in. Nam sodales dictum lacinia. Vivamus laoreet accumsan justo, vitae accumsan augue sagittis</p>
 
-                <section class="model-section">
-            <!-- 3D model section -->
-            <a-scene>
+<section class="model-section">
+            <a-scene renderer="antialias: true">
                 <a-entity id="yourModelID" gltf-model="url(test3dmodel.glb)"></a-entity>
             </a-scene>
         </section>
-        
     </main>
     
     <script src="scriptjava.js"></script>
