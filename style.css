@@ -90,16 +90,12 @@ main p {
 
 .model-section {
     width: 100%;
-    height: 500px; /* Set the height as needed */
+    height: 300px; /* Set the height as needed */
     overflow: auto; /* Enable scrolling within the container */
-    margin-top: 20px; /* Adjust this margin based on your layout */
+    position: absolute;
+    bottom: 0;
+    left: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative; /* Ensure relative positioning */
-}
-
-/* If necessary, style the a-scene to occupy the full height */
-.model-section a-scene {
-    height: 100%;
 }
