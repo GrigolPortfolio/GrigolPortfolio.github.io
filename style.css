@@ -88,7 +88,29 @@ main p {
     margin-top: 5cm;
 }
 
-.model-section {
+section {
+    padding: 15px;
+    width: 50%;
+    height: 150px; /* Set the height as needed */
+    overflow: scroll;  /* auto */  /* Enable scrolling within the container */
+    position: center;   /* absolute */ 
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5 auto;
+    margin-top: 15px;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    
+    }
+
+
+
+section .model-section {
     padding: 15px;
     width: 50%;
     height: 150px; /* Set the height as needed */
