@@ -96,4 +96,10 @@ main p {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative; /* Ensure relative positioning */
+}
+
+/* If necessary, style the a-scene to occupy the full height */
+.model-container a-scene {
+    height: 100%;
 }
