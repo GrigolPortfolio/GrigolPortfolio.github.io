@@ -109,7 +109,7 @@ section {
     }
 
 .stl-model {
-    width: 300px; /* Adjust the width as needed */
+    width: 3000px; /* Adjust the width as needed */
     height: 300px; /* Adjust the height as needed */
     margin-left: 20px; /* Adjust the margin from the left */
     transform-style: preserve-3d;
