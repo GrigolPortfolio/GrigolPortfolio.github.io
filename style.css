@@ -108,5 +108,22 @@ section {
     
     }
 
+.stl-model {
+    width: 300px; /* Adjust the width as needed */
+    height: 300px; /* Adjust the height as needed */
+    margin-left: 20px; /* Adjust the margin from the left */
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+    animation: rotateModel 10s infinite linear; /* Adjust the animation speed */
+}
+
+@keyframes rotateModel {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
 
 
