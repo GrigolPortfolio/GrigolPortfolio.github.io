@@ -88,24 +88,3 @@ main p {
     margin-top: 5cm;
 }
 
-/* CSS for styling the iframe */
-.stl-model {
-    width: 100%; /* Adjust the width as needed */
-    height: 500px; /* Adjust the height as needed */
-    border: none; /* Remove iframe border */
-    background-color: transparent; /* Make the iframe background transparent */
-    display: block; /* Ensure iframe displays as a block element */
-    margin: 0 auto; /* Center the iframe */
-    transform-style: preserve-3d;
-    transform: rotateY(0deg);
-    animation: rotateModel 10s infinite linear; /* Adjust the animation speed */
-}
-
-@keyframes rotateModel {
-    from {
-        transform: rotateY(0deg);
-    }
-    to {
-        transform: rotateY(360deg);
-    }
-}
