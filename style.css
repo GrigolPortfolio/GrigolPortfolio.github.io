@@ -88,3 +88,11 @@ main p {
     margin-top: 5cm;
 }
 
+/* Style the container for the 3D model */
+#model-container {
+    width: 100%; /* Adjust width as needed */
+    height: 500px; /* Adjust height as needed */
+    margin: 0 auto; /* Center the container horizontally */
+    position: relative;
+    overflow: hidden; /* Ensure the 3D model stays within the container */
+}
