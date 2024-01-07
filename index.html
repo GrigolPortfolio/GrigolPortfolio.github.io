@@ -142,6 +142,7 @@
 
 <script src="three.min.js"></script>
 <script src="GLTFLoader.js"></script>
+<script src="OrbitControls.js"></script>
 <script>
     let scene;
 
@@ -155,6 +156,9 @@ camera.rotation.y = 45/180*Math.PI;
 camera.position.x = 800;
 camera.position.y = 100;
 camera.position.z = 1000;
+
+controls = new THREE.OrbitControls(camera);
+controls.addEventListener('change', renderer);
 
 renderer = new THREE.WebGLRenderer({antialias:true});
 renderer.setSize(window.innerWidth,window.innerHeight);
@@ -193,6 +197,11 @@ loader.load('result.gltf', function(gltf){
 });
 
     }
+    function animate() {
+        renderer.render(scene,camera);
+        requestAnimationFrame(animate);
+    }
+    init();
    </script> 
         
     
