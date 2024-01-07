@@ -88,41 +88,17 @@ main p {
     margin-top: 5cm;
 }
 
-section {
-    padding: 15px;
-    width: 50%;
-    height: 150px; /* Set the height as needed */
-    overflow: scroll;  /* auto */  /* Enable scrolling within the container */
-    position: center;   /* absolute */ 
-    bottom: 0;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 5 auto;
-    margin-top: 15px;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    
-    }
-
+/* CSS for styling the iframe */
 .stl-model {
-    width: 400px; /* Adjust the width as needed */
-    height: 400px; /* Adjust the height as needed */
-    margin: 0 auto; /* Center the model horizontally */
-    border: none; /* Remove the border */
-    overflow: hidden; /* Hide any overflow */
-    perspective: 1000px; /* Set perspective for 3D effect */
-}
-
-.stl-model iframe {
-    width: 100%;
-    height: 100%;
-    border: none; /* Remove the border */
+    width: 100%; /* Adjust the width as needed */
+    height: 500px; /* Adjust the height as needed */
+    border: none; /* Remove iframe border */
+    background-color: transparent; /* Make the iframe background transparent */
+    display: block; /* Ensure iframe displays as a block element */
+    margin: 0 auto; /* Center the iframe */
     transform-style: preserve-3d;
-    animation: rotateModel 20s infinite linear; /* Adjust the animation speed */
+    transform: rotateY(0deg);
+    animation: rotateModel 10s infinite linear; /* Adjust the animation speed */
 }
 
 @keyframes rotateModel {
