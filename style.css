@@ -109,12 +109,20 @@ section {
     }
 
 .stl-model {
-    width: 3000px; /* Adjust the width as needed */
-    height: 300px; /* Adjust the height as needed */
-    margin-left: 20px; /* Adjust the margin from the left */
+    width: 400px; /* Adjust the width as needed */
+    height: 400px; /* Adjust the height as needed */
+    margin: 0 auto; /* Center the model horizontally */
+    border: none; /* Remove the border */
+    overflow: hidden; /* Hide any overflow */
+    perspective: 1000px; /* Set perspective for 3D effect */
+}
+
+.stl-model iframe {
+    width: 100%;
+    height: 100%;
+    border: none; /* Remove the border */
     transform-style: preserve-3d;
-    transform: rotateY(0deg);
-    animation: rotateModel 10s infinite linear; /* Adjust the animation speed */
+    animation: rotateModel 20s infinite linear; /* Adjust the animation speed */
 }
 
 @keyframes rotateModel {
@@ -125,5 +133,3 @@ section {
         transform: rotateY(360deg);
     }
 }
-
-
