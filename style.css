@@ -50,6 +50,22 @@ header::before {
     margin-left: 20px; /* Adjust this value for the fixed distance */
 }
 
+/* Apply styles to ensure the right border is within the website margin */
+.right-border {
+    max-width: calc(100% - 10px);
+    overflow: hidden;
+}
+
+/* Ensure the text returns to the next line when reaching the right margin */
+#typewriter {
+    overflow: hidden;
+    border-right: .15em solid orange;
+    white-space: normal;
+    margin: 0;
+    letter-spacing: .10em;
+    animation: typing 3s steps(40) forwards;
+}
+
 header h1 {
     font-size: 35px; /* Fixed font-size value */
     text-align: left;
