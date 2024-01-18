@@ -1,3 +1,5 @@
+let loader = new THREE.GLTFLoader();
+
 //_____________________CODE FOR VIDEO______________________________
 
 // Code to handle video playback based on scroll position
@@ -25,3 +27,4 @@ loader.load('result.gltf',
       console.error("Error loading 3D model:", error);
    }
 );
+
