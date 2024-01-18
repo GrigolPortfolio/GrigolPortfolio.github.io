@@ -14,18 +14,15 @@
 </head>
 
 <body>
-    <!-- Your existing HTML content with header and other sections -->
     <header>
         <div class="header-content" style="display: flex; align-items: center;">
             <div class="header-text" style="margin-right: 50px;">
                 <h1 style="margin: 0;">GRIGOL <br> KHOCHIASHVILI</h1><br><h3>Grigolkhochiashvili@gmail.com<br>267-279-8648</h3>
-                <!-- No content in <h4> element -->
             </div>
-                <div class="textbox right-border">
-                    <p style="margin: 0;"><h4 id="typewriter" style="overflow: hidden; border-right: .15em solid orange; white-space: nowrap; margin: 0; letter-spacing: .10em; animation: typing 3s steps(40) forwards;"></h4></p>
-                </div>
-
+            <div class="textbox right-border">
+                <p style="margin: 0;"><h4 id="typewriter" style="overflow: hidden; border-right: .15em solid orange; white-space: nowrap; margin: 0; letter-spacing: .10em; animation: typing 3s steps(40) forwards;"></h4></p>
             </div>
+        </div>
     </header>
 
 
@@ -129,7 +126,7 @@
             Nulla id ligula ut leo dictum luctus nec sed quam. Nulla facilisi. Nullam rhoncus accumsan nibh, sed laoreet
             nisl vehicula in. Nam sosdsdsdsdsdsdsdsdsssdsdsddsasdsadsadasdales dictum lacinia. Vivamus laoreet accumsan justo, vitae accumsan augue sagittis
             at nello 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 
-            34 35 36 37 38 39 40 41 42
+            34 35 36 37 38 39 40 41 42 43
             "<br><br><br><br><br><br><br><br>
             </p>
 
@@ -141,79 +138,77 @@
    
     <!-- ________________________________Section for displaying the 3D model _________________________ -->
 
-<div id="model-container">
-    
-<script src="three.js"></script>
-<script type="module" src="GLTFLoader.js"></script>
-<script type="module" src="OrbitControls.js"></script>
-<script>
-    let scene;
+    <div id="model-container">
+        <script src="GLTFLoader.js"></script>
+        <script src="OrbitControls.js"></script>
+        <script>
+            let scene, camera, controls, renderer, hlight, directionalLight, light, light2, light3, light4, loader;
 
-    function init() {
+            function init() {
+                scene = new THREE.Scene();
+                scene.background = new THREE.Color(0xdddddd);
 
-scene = new THREE.Scene();
-scene.background = new THREE.Color(0xdddddd);
+                camera = new THREE.PerspectiveCamera(40, window.innerWidth / window.innerHeight, 1, 5000);
+                camera.rotation.y = 45 / 180 * Math.PI;
+                camera.position.x = 800;
+                camera.position.y = 100;
+                camera.position.z = 1000;
 
-camera = new THREE.PerspectiveCamera(40,window.innerWidth/window.innerHeight,1,5000);
-camera.rotation.y = 45/180*Math.PI;
-camera.position.x = 800;
-camera.position.y = 100;
-camera.position.z = 1000;
+                controls = new THREE.OrbitControls(camera);
+                controls.addEventListener('change', render);
 
-import { OrbitControls } from 'OrbitControls.js';
-controls = new OrbitControls(camera);
-controls.addEventListener('change', renderer);
+                renderer = new THREE.WebGLRenderer({ antialias: true });
+                renderer.setSize(window.innerWidth, window.innerHeight);
+                document.body.appendChild(renderer.domElement);
 
-renderer = new THREE.WebGLRenderer({antialias:true});
-renderer.setSize(window.innerWidth,window.innerHeight);
-document.body.appendChild(renderer.domElement);
+                hlight = new THREE.AmbientLight(0x404040, 100);
+                scene.add(hlight);
 
-hlight = new THREE.AmbientLight (0x404040,100);
-scene.add(hlight);
+                directionalLight = new THREE.DirectionalLight(0xffffff, 100);
+                directionalLight.position.set(0, 1, 0);
+                directionalLight.castShadow = true;
+                scene.add(directionalLight);
 
-directionalLight = new THREE.DirectionalLight(0xffffff,100);
-directionalLight.position.set(0,1,0);
-directionalLight.castShadow = true;
-scene.add(directionalLight);
+                light = new THREE.PointLight(0xc4c4c4, 10);
+                light.position.set(0, 300, 500);
+                scene.add(light);
 
-light = new THREE.PointLight(0xc4c4c4,10);
-light.position.set(0,300,500);
-scene.add(light);
+                light2 = new THREE.PointLight(0xc4c4c4, 10);
+                light2.position.set(500, 100, 0);
+                scene.add(light2);
 
-light2 = new THREE.PointLight(0xc4c4c4,10);
-light2.position.set(500,100,0);
-scene.add(light2);
+                light3 = new THREE.PointLight(0xc4c4c4, 10);
 
-light3 = new THREE.PointLight(0xc4c4c4,10);
-light3.position.set(0,100,-500);
-scene.add(light3);
+                light3.position.set(0, 100, -500);
+                scene.add(light3);
 
-light4 = new THREE.PointLight(0xc4c4c4,10);
-light4.position.set(-500,300,500);
-scene.add(light4);
+                light4 = new THREE.PointLight(0xc4c4c4, 10);
+                light4.position.set(-500, 300, 500);
+                scene.add(light4);
 
-let loader = new THREE.GLTFLoader();
-loader.load('result.gltf', function(gltf){
-  car = gltf.scene.children[0];
-  car.scale.set(0.5,0.5,0.5);
-  scene.add(gltf.scene);
-  animate();
-});
+                loader = new THREE.GLTFLoader();
+                loader.load('result.gltf', function (gltf) {
+                    car = gltf.scene.children[0];
+                    car.scale.set(0.5, 0.5, 0.5);
+                    scene.add(gltf.scene);
+                    animate();
+                });
+            }
 
-    }
-    function animate() {
-        renderer.render(scene,camera);
-        requestAnimationFrame(animate);
-    }
-    init();
-   </script> 
+            function animate() {
+                renderer.render(scene, camera);
+                requestAnimationFrame(animate);
+            }
 
-</div>
-        
-    
+            function render() {
+                renderer.render(scene, camera);
+            }
+
+            init();
+        </script>
+    </div>
+
     <br><br><br><br><br><br><br><br>
-        
-    
 
     <script src="scriptjava.js"></script>
 </body>
