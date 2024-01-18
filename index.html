@@ -160,7 +160,8 @@ camera.position.x = 800;
 camera.position.y = 100;
 camera.position.z = 1000;
 
-controls = new THREE.OrbitControls(camera);
+import { OrbitControls } from 'OrbitControls.js';
+controls = new OrbitControls(camera);
 controls.addEventListener('change', renderer);
 
 renderer = new THREE.WebGLRenderer({antialias:true});
