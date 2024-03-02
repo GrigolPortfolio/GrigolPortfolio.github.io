@@ -178,3 +178,13 @@ main p {
     position: relative;
     overflow: hidden; /* Ensure the 3D model stays within the container */
 }
+
+.sketchfab-embed-wrapper {
+    position: fixed;
+    left: 25%; /* Adjust as needed */
+    bottom: 25%; /* Adjust as needed */
+}
+.sketchfab-embed-wrapper iframe {
+    width: 50vw; /* Adjust as needed */
+    height: 50vh; /* Adjust as needed */
+}
