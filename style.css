@@ -1,5 +1,4 @@
-/* ... (other CSS styles) ... */
-
+/* Header styles */
 header {
     position: fixed;
     background-color: #90c1f8;
@@ -8,23 +7,14 @@ header {
     padding: 15px;
     margin: 0 auto;
     margin-top: 15px;
-    transition: box-shadow .3s ease-in-out;
+    transition: opacity 0.5s ease-in-out; /* Added transition property */
     box-shadow: 0px 8px 50px rgba(0, 0, 0, 0.938);
-    position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 1000;
     height: 250px;
     border-radius: 15px;
-}
-
-/* Flexbox setup for header content alignment */
-.header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
 }
 
 header::before {
@@ -34,10 +24,12 @@ header::before {
     bottom: 15px;
     left: 500px; /* Adjust distance from the right */
     width: 5px;
-    background-color: black;
+    background-color: black; /* Add back the black color */
     z-index: -1;
 }
 
+
+/* Flexbox setup for header content alignment */
 .header-content {
     display: flex;
     justify-content: space-between;
@@ -45,18 +37,18 @@ header::before {
     position: relative;
 }
 
-/* Adjust the positioning of the text box */
-.header-textbox {
-    margin-left: 20px; /* Adjust this value for the fixed distance */
-}
-
 /* Apply styles to ensure the right border is within the website margin */
 .right-border {
     max-width: calc(100% - 10px);
     overflow: hidden;
 }
 
+/* Text box styling */
+.header-textbox {
+    margin-left: 20px; /* Adjust this value for the fixed distance */
+}
 
+/* Typewriter animation */
 #typewriter {
     overflow: hidden;
     border-right: .15em solid orange;
@@ -66,21 +58,23 @@ header::before {
     animation: typing 3s steps(40) forwards;
 }
 
+/* Heading styles */
 header h1 {
-    font-size: 35px; /* Fixed font-size value */
+    font-size: 35px;
     text-align: left;
-    margin-left: 20px; /* Adjust left margin */
-    margin-bottom: 10px; /* Spacing between h1 and h4 */
+    margin-left: 20px;
+    margin-bottom: 10px;
 }
 
+/* Subheading styles */
 header h4 {
-    font-size: 20px; /* Fixed font-size value */
+    font-size: 20px;
     text-align: left;
-    margin-left: 200px; /* Adjust left margin */
+    margin-left: 200px;
     margin-right: 120px;
 }
 
-
+/* Main content styles */
 main {
     margin-top: 285px;
     margin-bottom: 5px;
@@ -92,99 +86,74 @@ main {
     margin: 0 auto;
 }
 
+/* Heading in the main content */
 main h3 {
     text-align: center;
     margin-bottom: 150px;
     margin-top: 150px;
 }
 
+/* Paragraph in the main content */
 main p {
     text-align: center;
     margin: 5px auto;
     margin-top: 5cm;
-}
-
-/* Style the container for the 3D model */
-#model-container {
-    width: 100%; /* Adjust width as needed */
-    height: 500px; /* Adjust height as needed */
-    margin: 0 auto; /* Center the container horizontally */
-    position: relative;
-    overflow: hidden; /* Ensure the 3D model stays within the container */
-}
-/* Adjust the positioning of the text box */
-.header-textbox {
-    margin-left: 20px; /* Adjust this value for the fixed distance */
-}
-
-/* Apply styles to ensure the right border is within the website margin */
-.right-border {
-    max-width: calc(100% - 10px);
-    overflow: hidden;
-}
-
-/* Ensure the text returns to the next line when reaching the right margin */
-#typewriter {
-    overflow: hidden;
-    border-right: .15em solid orange;
-    white-space: normal;
-    margin: 0;
-    letter-spacing: .10em;
-    animation: typing 3s steps(40) forwards;
-}
-
-header h1 {
-    font-size: 35px; /* Fixed font-size value */
-    text-align: left;
-    margin-left: 20px; /* Adjust left margin */
-    margin-bottom: 10px; /* Spacing between h1 and h4 */
-}
-
-header h4 {
-    font-size: 20px; /* Fixed font-size value */
-    text-align: left;
-    margin-left: 200px; /* Adjust left margin */
-    margin-right: 120px;
-}
-
-main {
-    margin-top: 285px;
-    margin-bottom: 5px;
-    background-color: #fdf5eaf3;
-    padding: 0px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    width: 100%;
-    color: #000;
-    margin: 0 auto;
-}
-
-main h3 {
-    text-align: center;
-    margin-bottom: 150px;
-    margin-top: 150px;
-}
-
-main p {
-    text-align: center;
-    margin: 5px auto;
-    margin-top: 5cm;
-}
-
-/* Style the container for the 3D model */
-#model-container {
-    width: 100%; /* Adjust width as needed */
-    height: 500px; /* Adjust height as needed */
-    margin: 0 auto; /* Center the container horizontally */
-    position: relative;
-    overflow: hidden; /* Ensure the 3D model stays within the container */
 }
 
 .sketchfab-embed-wrapper {
-    position: fixed;
-    left: 25%; /* Adjust as needed */
-    bottom: 25%; /* Adjust as needed */
+    position: absolute;
+    left: 110;
+    top: 475;
+    width: 60%;
+    height: 30%;
 }
+
 .sketchfab-embed-wrapper iframe {
-    width: 50vw; /* Adjust as needed */
-    height: 50vh; /* Adjust as needed */
+    width: 65%;
+    height: 120%;
+}
+
+.main-box {
+    background-color: #bad8f9;
+    padding: 20px;
+    margin-top: 340px; /* Adjust margin as needed */
+    margin-bottom: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+    border-radius: 0px; /* Add rounded corners */
+    margin-left: 75px;
+    margin-right: 75px;
+    text-align: center;
+}
+
+.main-box h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: .5px;
+    margin-top: .5px;
+}
+
+.additional-box {
+   // background-color: #aed2fc;
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 5px;
+    margin-top: 400px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.additional-box h3 {
+
+    font-size: 25px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.container {
+    display: flex; /* Use flexbox for layout */
+}
+
+.textbox {
+    flex: 1; /* Each textbox takes equal space */
+Presentation of simulation results, including stress distribution maps and deformation analysis, to illustrate the effectiveness of the design modifications.
 }
