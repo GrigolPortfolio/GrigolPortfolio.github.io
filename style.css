@@ -42,11 +42,6 @@ header::before {
     overflow: hidden;
 }
 
-/* Text box styling */
-.header-textbox {
-    margin-left: 20px; /* Adjust this value for the fixed distance */
-}
-
 /* Typewriter animation */
 #typewriter {
     overflow: hidden;
@@ -54,7 +49,7 @@ header::before {
     white-space: normal;
     margin: 0;
     letter-spacing: .10em;
-    animation: typing 3s steps(40) forwards;
+    animation: typing 1s steps(40) forwards;
 }
 
 /* Heading styles */
@@ -103,7 +98,7 @@ main p {
 .sketchfab-embed-wrapper {
     position: absolute;
     left: 25px;
-    top: 4300px;
+    top: 915px;
     width: 60%;
     height: 30%;
 }
@@ -203,13 +198,14 @@ main p {
     animation: fadein 2s; /* Animation effect */
 }
 
+
 @keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
 }
 
 body {
-    margin-top: 3800px;
+    margin-top: 420px;
     border-color: #ccc;
     box-shadow: #ccc;
     color: #ffffff;
@@ -225,4 +221,3 @@ body {
 ::-webkit-scrollbar {
     display: none;
 }
-
