@@ -1,7 +1,7 @@
 /* Header styles */
 header {
     position: fixed;
-    background-color: #90c1f8;
+    background-color: #19407b;
     color: #000000;
     width: 97%;
     padding: 15px;
@@ -98,7 +98,7 @@ main p {
 .sketchfab-embed-wrapper {
     position: absolute;
     left: 25px;
-    top: 915px;
+    top: 935px;
     width: 60%;
     height: 30%;
 }
@@ -109,7 +109,7 @@ main p {
 }
 
 .main-box {
-    background-color: #bad8f9;
+    background-color: #486fa9;
     padding: 20px;
     margin-top: 100px; /* Adjust margin as needed */
     margin-bottom: 5px;
@@ -138,16 +138,18 @@ main p {
     margin-left: 2%;
     margin-right: 2%;
     font-family: "San Francisco", Arial, sans-serif;
+    
 }
 
 .additional-box h3 {     //Three column headers(What?, How?, Results)
     font-size: 25px;
     margin-bottom: 30px;
     text-align: left;
-    border: 3px solid #bad8f9;
+    border: 3px solid #486fa9;
     border-radius: 5px;
     font-family: "San Francisco", Arial, sans-serif;
-    background-color: #aed2fc;
+    background-color: #486fa9;
+
 }
 
 .container {
@@ -205,7 +207,7 @@ main p {
 }
 
 body {
-    margin-top: 420px;
+    margin-top: 450px;
     border-color: #ccc;
     box-shadow: #ccc;
     color: #ffffff;
