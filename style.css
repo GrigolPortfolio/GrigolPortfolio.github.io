@@ -42,15 +42,25 @@ header::before {
     overflow: hidden;
 }
 
-/* Typewriter animation */
 #typewriter {
     overflow: hidden;
-    border-right:.15em solid rgb(255, 119, 0);
-    white-space: normal;
-    margin: 0;
+    border-right: .15em solid rgb(21, 0, 255);
+    white-space: nowrap; /* Ensure the text doesn't wrap */
+    margin: 0; /* Adjust margin as needed */
+    padding-right: 10px; /* Adjust padding for spacing between text and border */
     letter-spacing: .10em;
-    animation: typing 1s steps(40) forwards;
+    animation: typing 20s steps(40) forwards; /* Adjust duration (2s in this example) */
 }
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: calc(100% + .15em);
+    }
+}
+
 
 /* Heading styles */
 header h1 {
@@ -130,7 +140,7 @@ main p {
 }
 
 .additional-box {        //Three column boxes (Structure, design process, enhanced stability)
-   // background-color: #aed2fc;
+    background-color: #0C2340;
     font-size: 18px;
     color: #333;
     margin-bottom: 5px;
@@ -160,7 +170,6 @@ main p {
     flex: 1; /* Each textbox takes equal space */
     margin: 10px; /* Adjust margin as needed */
     padding: 10px; /* Adjust padding as needed */
-    border: 1px solid #ccc; /* Add border for visibility */
 }
 
 /* Style for the fading effect */
